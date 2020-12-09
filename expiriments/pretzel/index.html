@@ -13,19 +13,20 @@
               
     </body>
     <script>
-        var pretzelcount = 0;
+        var pretzelsStored = 0;
     function save() {
-        localStorage.setItem('pretzelcount', pretzelcount);
+        localStorage.setItem('pretzelcount', pretzelsStored);
     }
     function load() {
-        pretzelcount = localStorage.getItem('pretzelcount');
-        document.title = pretzelcount + 'Pretzels'
-        document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount
+        pretzelsStored = localStorage.getItem('pretzelcount');
+        pretzelsStored = parseInt(pretzelsStored);
+        document.title = pretzelsStored + ' Pretzels'
+        document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored
     }
     function pretzelClicked() {
-        pretzelcount = pretzelcount + 1;
-        document.title = pretzelcount + 'Pretzels'
-        document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount;
+        pretzelsStored = pretzelsStored + 1;
+        document.title = pretzelsStored + ' Pretzels'
+        document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
     }
     </script>
 </html>
