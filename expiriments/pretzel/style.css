@@ -1,5 +1,10 @@
 .pretzel {
     position: absolute;
     left: 60px;
-    top: 70px;
+    top: 270px;
+}
+.loader {
+    border-radius: 10%;
+    border: 2px solid;
+    background-color: crimson;
 }

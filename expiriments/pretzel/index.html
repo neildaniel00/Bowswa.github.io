@@ -1,11 +1,29 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Pretzel Clicker - V0.1</title>
+        <title>Pretzel Clicker</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <img src="img/Pretzel.png" alt="Pretzel to click" style="width:200px;height:200px;" class="pretzel">
+        <t1 id="prtzlcount">Pretzels: 0</t1>
+        <button src="img/Pretzel.png" style="width:300px;height:300px;" class="pretzel" onclick="pretzelClicked()"></button>
+        <center>
+            <button class="loader" onclick="load()">Load</button>
+            <button class="loader" onclick="save()">Save</button>
+        </center>
     </body>
+    function save() {
+        localStorage.setItem('pretzelcount', pretzelcount);
+    }
+    function load() {
+        pretzelcount = localStorage.getitem(pretzelcount);
+        document.title = pretzelcount + 'Pretzels'
+        document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount
+    }
+    function pretzelClicked() {
+        pretzelcount = pretzelcount + 1;
+        document.title = pretzelcount + 'Pretzels'
+        document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount;
+    }
 </html>
