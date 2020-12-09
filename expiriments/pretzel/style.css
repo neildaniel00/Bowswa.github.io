@@ -2,8 +2,6 @@
     position: absolute;
     left: 60px;
     top: 270px;
-    background: url(img/Pretzel.png);
-    background-size: 256px 256px;
 }
 .loader {
     border-radius: 10%;
