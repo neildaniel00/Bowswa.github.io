@@ -11,6 +11,7 @@
             <button class="loader" onclick="load()">Load</button>
             <button class="loader" onclick="save()">Save</button>
     </body>
+    <script>
     function save() {
         localStorage.setItem('pretzelcount', pretzelcount);
     }
@@ -24,4 +25,5 @@
         document.title = pretzelcount + 'Pretzels'
         document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount;
     }
+    </script>
 </html>
