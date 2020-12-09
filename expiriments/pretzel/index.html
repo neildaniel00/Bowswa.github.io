@@ -8,10 +8,8 @@
     <body>
         <t1 id="prtzlcount">Pretzels: 0</t1>
         <button src="img/Pretzel.png" style="width:300px;height:300px;" class="pretzel" onclick="pretzelClicked()"></button>
-        <center>
             <button class="loader" onclick="load()">Load</button>
             <button class="loader" onclick="save()">Save</button>
-        </center>
     </body>
     function save() {
         localStorage.setItem('pretzelcount', pretzelcount);
