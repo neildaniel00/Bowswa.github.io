@@ -16,7 +16,8 @@
         var pretzelsStored = 0;
         window.onload = autoSave();
     function autoSave() {
-            setInterval(save, 5000)
+            load();
+            setInterval(save, 60000)
         };
     function save() {
         localStorage.setItem('pretzelcount', pretzelsStored);
