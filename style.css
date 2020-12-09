@@ -25,7 +25,7 @@ body {
     text-decoration: none;
 }
 .topnav a:visited {
-    color:powderblue;
+    color:rgba(0, 119, 255, 0.685);
     text-decoration: none;
 }
 .topnav a:hover {
