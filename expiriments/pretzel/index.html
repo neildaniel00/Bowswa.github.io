@@ -13,8 +13,11 @@
               
     </body>
     <script>
-        setInterval(save(), 5000)
         var pretzelsStored = 0;
+        window.onload = autoSave();
+    function autoSave() {
+            setInterval(save, 5000)
+        };
     function save() {
         localStorage.setItem('pretzelcount', pretzelsStored);
         alert('Game Saved!');
