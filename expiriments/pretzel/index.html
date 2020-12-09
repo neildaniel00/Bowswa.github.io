@@ -7,9 +7,13 @@
 
     <body>
         <t1 id="prtzlcount">Pretzels: 0</t1>
-        <button src="img/Pretzel.png" style="width:300px;height:300px;" class="pretzel" onclick="pretzelClicked()"></button>
+        <img src="img/Pretzel.png" alt="Click me!" style="width:300px;height:300px;" id="pretzel" usemap="#pretzel">
             <button class="loader" onclick="load()">Load</button>
             <button class="loader" onclick="save()">Save</button>
+            <map name="workmap">
+                <area shape="rect" coords="0,0,300,300" alt="Pretzel to click!" onclick="pretelClicked()">
+              </map>
+              
     </body>
     <script>
     function save() {
