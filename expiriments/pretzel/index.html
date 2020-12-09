@@ -18,7 +18,7 @@
         localStorage.setItem('pretzelcount', pretzelcount);
     }
     function load() {
-        pretzelcount = localStorage.getItem(pretzelcount);
+        pretzelcount = localStorage.getItem('pretzelcount');
         document.title = pretzelcount + 'Pretzels'
         document.getElementById('prtzlcount').value = 'Pretzels: ' + pretzelcount
     }
