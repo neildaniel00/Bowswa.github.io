@@ -13,9 +13,11 @@
               
     </body>
     <script>
+        setInterval(save(), 5000)
         var pretzelsStored = 0;
     function save() {
         localStorage.setItem('pretzelcount', pretzelsStored);
+        alert('Game Saved!');
     }
     function load() {
         pretzelsStored = localStorage.getItem('pretzelcount');
