@@ -32,14 +32,14 @@
     function load() {
         pretzelsStored = localStorage.getItem('pretzelcount');
         clickerAmount = localStorage.getItem('clickers');
-        pretzelsStored = parseInt(pretzelsStored);
-        clickerAmount = parseInt(clickerAmount);
         if (pretzelsStored = NaN) {
-            pretzelsStored = 0
+            var pretzelsStored = 0;
         }
         if (clickerAmount = NaN) {
-            clickerAmount = 0
+            var clickerAmount = 0
         }
+        pretzelsStored = parseInt(pretzelsStored);
+        clickerAmount = parseInt(clickerAmount);
         document.title = pretzelsStored + ' Pretzels'
         document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored
     }
