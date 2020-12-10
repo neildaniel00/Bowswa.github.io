@@ -10,10 +10,14 @@
         <button id="pretzel" onclick="pretzelClicked()" style="background: url(img/Pretzel.png);width:350px;height:350px;border:0px;"></button>
         <button class="loader" onclick="load()">Load</button>
         <button class="loader" onclick="save()">Save</button>
+        <p id="clicker">Clicker! 0 Owned</p>
+        <p id="clicker_disc">Autoclicks the Pretzel every 10 seconds.</p>
+        <button class="buy" onclick="buyClicler()">Buy</button>
               
     </body>
     <script>
         var pretzelsStored = 0;
+        var clickerAmount = 0;
         window.onload = autoSave();
     function autoSave() {
             load();
@@ -21,16 +25,36 @@
         };
     function save() {
         localStorage.setItem('pretzelcount', pretzelsStored);
+        localStorage.setItem('clickers', clickerAmount);
         alert('Game Saved!');
     }
     function load() {
         pretzelsStored = localStorage.getItem('pretzelcount');
+        clickerAmount = localStorage.getItem('clickers');
         pretzelsStored = parseInt(pretzelsStored);
+        clickerAmount = parseInt(clickerAmount);
+        if (pretzelsStored = NaN) {
+            pretzelsStored = 0
+        }
+        if (clickerAmount = NaN) {
+            clickerAmount = 0
+        }
         document.title = pretzelsStored + ' Pretzels'
         document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored
     }
     function pretzelClicked() {
         pretzelsStored = pretzelsStored + 1;
+        document.title = pretzelsStored + ' Pretzels'
+        document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
+    }
+    function buyClicler() {
+        clickerAmount = clickerAmount + 1
+        document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
+        setInterval(Clicker, 10000);
+    }
+    function Clicker() {
+        var clickerEarnings = clickerAmount * 1
+        pretzelsStored = pretzelsStored + clickerEarnings;
         document.title = pretzelsStored + ' Pretzels'
         document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
     }
