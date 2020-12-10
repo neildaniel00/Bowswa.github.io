@@ -52,6 +52,9 @@
         if (clickerAmount = NaN) {
             clickerAmount = 0
         }
+        if (pretzelsStored < 15) {
+            return alert('You do not have enough Pretzels to buy.');
+        }
         document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
         if (clickerAmount > 0) {
             setInterval(Clicker, 10000);
