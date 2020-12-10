@@ -49,8 +49,13 @@
     }
     function buyClicler() {
         clickerAmount = clickerAmount + 1
+        if (clickerAmount = NaN) {
+            clickerAmount = 0
+        }
         document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
-        setInterval(Clicker, 10000);
+        if (clickerAmount > 0) {
+            setInterval(Clicker, 10000);
+        }
     }
     function Clicker() {
         var clickerEarnings = clickerAmount * 1
