@@ -46,7 +46,7 @@ function buyClicker() {
         return alert('You do not have enough Pretzels to buy.');
     };
     document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
-    if (clickerAmount < 10 && build1Check === false) {
+    if (clickerAmount < 10 && clickerAmount >= 1 && build1Check === false) {
         setInterval(Clicker, 10000);
         build1Check = true;
         build1persec = false;
