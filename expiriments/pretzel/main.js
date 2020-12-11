@@ -44,22 +44,24 @@ function buyClicker() {
     if (pretzelsStored < 15) {
         return alert('You do not have enough Pretzels to buy.');
     };
-    clickerAmount = clickerAmount + 1
-    document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
-    if (clickerAmount < 10 && clickerAmount >= 1 && build1Check === false) {
-        setInterval(Clicker, 10000);
-        build1Check = true;
-        build1persec = false;
-    };
-    if (clickerAmount >= 10 && build1Check === false || build1persec === false) {
-        if (build1persec === false) {
-            clearInterval(Clicker, 10000);
-            build1persec = true;
+    if (pretzelsStored >= 15) {
+        clickerAmount = clickerAmount + 1
+        document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
+        if (clickerAmount < 10 && clickerAmount >= 1 && build1Check === false) {
+            setInterval(Clicker, 10000);
+            build1Check = true;
+            build1persec = false;
         };
-        setInterval(Clicker, 1000);
-        build1Check = true;
-    };
-    pretzelsStored = pretzelsStored - 15;
+        if (clickerAmount >= 10 && build1Check === false || build1persec === false) {
+            if (build1persec === false) {
+                clearInterval(Clicker, 10000);
+                build1persec = true;
+            };
+            setInterval(Clicker, 1000);
+            build1Check = true;
+        };
+        pretzelsStored = pretzelsStored - 15;
+    }
 };
 function Clicker() {
     var clickerEarnings = .1
