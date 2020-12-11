@@ -41,10 +41,10 @@ function pretzelClicked() {
     document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored.toFixed(1);
 };
 function buyClicker() {
-    clickerAmount = clickerAmount + 1
     if (pretzelsStored < 15) {
         return alert('You do not have enough Pretzels to buy.');
     };
+    clickerAmount = clickerAmount + 1
     document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
     if (clickerAmount < 10 && clickerAmount >= 1 && build1Check === false) {
         setInterval(Clicker, 10000);
