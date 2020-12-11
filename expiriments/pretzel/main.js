@@ -24,7 +24,7 @@ function pretzelClicked() {
     document.title = pretzelsStored + ' Pretzels';
     document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
 };
-function buyClicler() {
+function buyClicker() {
     clickerAmount = clickerAmount + 1
     if (pretzelsStored < 15) {
         return alert('You do not have enough Pretzels to buy.');
