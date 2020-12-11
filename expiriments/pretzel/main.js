@@ -32,13 +32,13 @@ function load() {
     clickerAmount = localStorage.getItem('clickers');
     pretzelsStored = parseInt(pretzelsStored);
     clickerAmount = parseInt(clickerAmount);
-    document.title = pretzelsStored + ' Pretzels';
-    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
+    document.title = pretzelsStored.toFixed(1) + ' Pretzels';
+    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored.toFixed(1);
     document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned'
 };
 function pretzelClicked() {
     pretzelsStored = pretzelsStored + 1;
-    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
+    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored.toFixed(1);
 };
 function buyClicker() {
     clickerAmount = clickerAmount + 1
@@ -59,6 +59,7 @@ function buyClicker() {
         setInterval(Clicker, 1000);
         build1Check = true;
     };
+    pretzelsStored = pretzelsStored - 15;
 };
 function Clicker() {
     var clickerEarnings = .1
@@ -69,8 +70,8 @@ function Clicker() {
         clickerEarnings = clickerAmount * clickerEarnings / 10 * 1;
     }
     pretzelsStored = pretzelsStored + clickerEarnings;
-    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored;
+    document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored.toFixed(1);
 };
 function updateprzlcnt() {
-    document.title = pretzelsStored + ' Pretzels';
+    document.title = pretzelsStored.toFixed(1) + ' Pretzels';
 }
