@@ -69,7 +69,7 @@ function Clicker() {
         clickerEarnings = clickerAmount * clickerEarnings * 1;
     };
     if (clickerAmount >= 10) {
-        clickerEarnings = clickerAmount * clickerEarnings / 10 * 1;
+        clickerEarnings = clickerAmount * clickerEarnings * 1;
     }
     pretzelsStored = pretzelsStored + clickerEarnings;
     document.getElementById('prtzlcount').innerHTML = 'Pretzels: ' + pretzelsStored.toFixed(1);
