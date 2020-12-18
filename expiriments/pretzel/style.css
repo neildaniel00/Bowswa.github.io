@@ -1,7 +1,20 @@
-.pretzel {
+.box {
+    background-color: cyan;
     position: absolute;
     left: 60px;
     top: 270px;
+    border: 1px solid;
+}
+.box {
+    background-color: cyan;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+.box:active {
+    transform: scale(0.75);
+    /* Scaling button to 0.75 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .loader {
     border-radius: 10%;
