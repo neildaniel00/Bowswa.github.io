@@ -8,9 +8,14 @@
     </head>
 
     <body>
-        <div id="topbar">
+        <div id="topBar">
             <p class="warning">The game is currently being changed in backend format. Bugs are expected at first.</p>
             <a href="https://bowswa.github.io">Bowswa</a>
+        </div>
+        <div id="sectionLeft">
+            <p id="prtzlbank">Pretzels: 0</p>
+            <input type="image" class="box" id="pretzel" onclick="pretzelClicked()" alt="Pretzel"
+           src="img/Pretzel.png">
         </div>
         <button class="menu" id="settings">Settings</button>
         <button class="menu" id="changelog">Updates</button>
@@ -18,9 +23,6 @@
         <button class="menu" id="stats">Stats</button>
         <!--<button class="menu" id="Acendance">Acend</button>-->
 
-        <p id="prtzlbank">Pretzels: 0</p>
-        <input type="image" class="box" id="pretzel" onclick="pretzelClicked()" alt="Pretzel"
-       src="img/Pretzel.png">
         <br>
         <button class="loader" onclick="load()">Load</button>
 &NonBreakingSpace;
