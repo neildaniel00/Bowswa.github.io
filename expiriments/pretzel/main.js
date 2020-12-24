@@ -22,15 +22,6 @@ function processStart() {
         build1Check = true;
     };
 };
-function prompttest() {
-    test = prompt('Are you sure you want to reset? [y/n]:');
-    test.shift().toLowerCase();
-    if (test === 'yes' || test === 'y') {
-        alert('it worked');
-    }else {
-        alert('failyre');
-    }
-};
 function save() {
     localStorage.setItem('pretzelcount', pretzelsStored);
     localStorage.setItem('clickers', clickerAmount);
