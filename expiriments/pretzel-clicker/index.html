@@ -13,9 +13,10 @@
             <a href="https://bowswa.github.io">Bowswa</a>
         </div>
         <div id="sectionLeft">
-            <p id="prtzlbank">Pretzels: 0</p>
+            <p id="prtzlBank">Pretzels: 0</p>
             <input type="image" class="box" id="pretzel" onclick="pretzelClicked()" alt="Pretzel"
            src="img/Pretzel.png">
+           <p id=version>Version: </p>
         </div>
         <div id="sectionMiddle">
             <button class="menu" id="settings">Settings</button>
@@ -34,14 +35,14 @@
             <p id="clicker_price">15 Pretzels</p>
             <button class="buy" onclick="buyClicker()">Buy</button>
     &NonBreakingSpace;
-            <button class="sell">Sell</button>
+            <button class="sell" onclick="sellClicker()">Sell</button>
             <br>
             <p id="grandma_baker">Grandma Baker! 0 Owned</p>
             <p id="grandma_baker_disc">Bakes a cookie every single second.</p>
-            <p id="grandma_baker_price">100 Pretzels</p>
-            <button class="buy">Buy</button>
+            <p id="grandma_price">100 Pretzels</p>
+            <button class="buy" onclick="buyGrandma()">Buy</button>
     &NonBreakingSpace;
-            <button class="sell">Sell</button>
+            <button class="sell" onclick="sellGrandma()">Sell</button>
         </div>
     </body>
 </html>

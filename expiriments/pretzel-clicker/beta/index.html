@@ -1,0 +1,48 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pretzel Clicker</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <div id="topBar">
+            <p class="warning">The game is currently being changed in backend format. Bugs are expected at first.</p>
+            <a href="https://bowswa.github.io">Bowswa</a>
+        </div>
+        <div id="sectionLeft">
+            <p id="prtzlBank">Pretzels: 0</p>
+            <input type="image" class="box" id="pretzel" onclick="pretzelClicked()" alt="Pretzel"
+           src="img/Pretzel.png">
+           <p id=version>Version: </p>
+        </div>
+        <div id="sectionMiddle">
+            <button class="menu" id="settings">Settings</button>
+            <button class="menu" id="changelog">Updates</button>
+            <br>
+            <button class="menu" id="stats">Stats</button>
+            <!--<button class="menu" id="Acendance">Acend</button>-->
+            <br>
+            <button class="loader" onclick="load()">Load</button>
+&NonBreakingSpace;
+            <button class="loader" onclick="save()">Save</button>
+        </div>
+        <div id="sectionRight">
+            <p id="clicker">Clicker! 0 Owned</p>
+            <p id="clicker_disc">Autoclicks the Pretzel every 10 seconds.</p>
+            <p id="clicker_price">15 Pretzels</p>
+            <button class="buy" onclick="buyClicker()">Buy</button>
+    &NonBreakingSpace;
+            <button class="sell" onclick="sellClicker()">Sell</button>
+            <br>
+            <p id="grandma_baker">Grandma Baker! 0 Owned</p>
+            <p id="grandma_baker_disc">Bakes a cookie every single second.</p>
+            <p id="grandma_price">100 Pretzels</p>
+            <button class="buy" onclick="buyGrandma()">Buy</button>
+    &NonBreakingSpace;
+            <button class="sell" onclick="sellGrandma()">Sell</button>
+        </div>
+    </body>
+</html>
