@@ -93,7 +93,7 @@ function priceBuildings() {
     priceGrandmas();
 };
 function priceClickers() {
-    clickrMath = Math.pow(1.25, clickerBuildAmount);
+    clickerMath = Math.pow(1.25, clickerBuildAmount);
     clickerPrice = 15 * clickerMath;
 };
 function priceGrandmas() {
