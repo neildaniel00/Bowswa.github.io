@@ -231,3 +231,4 @@ function processStart() {
         grandmaInterval = true;
     }
 };
+window.onload(processStart());
