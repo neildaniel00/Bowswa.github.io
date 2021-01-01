@@ -234,4 +234,4 @@ function processStart() {
         grandmaInterval = true;
     }
 };
-window.onload(processStart());
+window.onload = processStart();
