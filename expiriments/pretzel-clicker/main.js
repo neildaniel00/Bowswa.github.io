@@ -107,7 +107,7 @@ function priceGrandmas() {
 function pretzelClicked() {
     pretzelBank = pretzelBank + PPC;
     totalPretzelCount = totalPretzelCount + PPC;
-    document.getElementById('prtzlBank').innerHTML = 'Pretzels: ' + pretzelBank.toFixed(1);
+    updatePretzels();
 };
 function reset() {
     pretzelBank = 0;
