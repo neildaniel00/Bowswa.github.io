@@ -58,7 +58,7 @@ function load() {
     }
 };
 function update5sec() {
-    document.title = pretzelBank.toFixed(1) + 'Pretzels';
+    document.title = pretzelBank.toFixed(1) + ' Pretzels';
 };
 function updateAll() {
     update5sec();
