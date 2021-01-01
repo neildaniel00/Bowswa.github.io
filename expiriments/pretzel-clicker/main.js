@@ -91,7 +91,7 @@ function updateGrandmas() {
 };
 function updateVersion() {
     document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
-}
+};
 function priceBuildings() {
     priceClickers();
     priceGrandmas();
