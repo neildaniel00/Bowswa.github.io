@@ -66,6 +66,7 @@ function updateAll() {
     priceBuildings();
     updateClickers();
     updateGrandmas();
+    updateVersion();
 };
 function updateNormal() {
     updatePretzels();
@@ -88,6 +89,9 @@ function updateGrandmas() {
     document.getElementById('grandma_baker').innerHTML = 'Grandma Baker! ' + grandmaBakerAmount + ' Owned';
     document.getElementById('grandma_price').innerHTML = grandmaPrice + ' Pretzels';
 };
+function updateVersion() {
+    document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
+}
 function priceBuildings() {
     priceClickers();
     priceGrandmas();
@@ -187,7 +191,7 @@ function grandmaCalc() {
 function buyGrandma() {
     if (pretzelBank < grandmaPrice) {
         alert('Umm, Something\'s missing :/');
-    }else if (pretzelBank <= grandmaPrice) {
+    }else if (pretzelBank >= grandmaPrice) {
         pretzelBank = pretzelBank - grandmaPrice
         grandmaBakerAmount = grandmaBakerAmount + 1;
         grandmaBuildAmount = grandmaBuildAmount + 1;
@@ -218,7 +222,6 @@ function sellGrandma() {
     }
 };
 function processStart() {
-    document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
     load();
     setInterval(save, 60000);
     setInterval(update5sec, 5000);
