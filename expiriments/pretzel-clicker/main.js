@@ -110,30 +110,42 @@ function pretzelClicked() {
     updatePretzels();
 };
 function reset() {
+    reset1 = confirm('Are you sure you want to reset?');
+    if (reset1 === true) {
+    reset2 = confirm('Once you do this, there is no going back!');
+    if (reset2 === true) {
     pretzelBank = 0;
     totalPretzelCount = 0;
     PPC = 1;
-    
+
     clickerAmount = 0;
     clickerBuildAmount = 0;
     clickerPrice = 15;
     clickerInterval = false;
-    
+
     grandmaBakerAmount = 0;
     grandmaBuildAmount = 0;
-    grandmaPrice =  100;
+    grandmaPrice = 100;
     grandmaInterval = false;
-    
+
     upgradeCount = 0;
     achievementCount = 0;
-    
+
     prestigeCount = 0;
     prestigeMode = 0;
     prestigeChallenge = 0;
     activePrestigePercent = 0;
-    
+
     displayGameVersion = 0.01;
     gameVersion = displayGameVersion;
+    updateNormal();
+    }
+    else {
+        alert('You made the right choice. Who would want to reset?')
+    }}
+        else {
+        alert('You made the right choice. Who would want to reset?')
+    }
 };
 function clickerCalc() {
     if (clickerAmount = 0) {

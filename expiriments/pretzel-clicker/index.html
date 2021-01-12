@@ -1,9 +1,28 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Pretzel Clicker</title>
         <link rel="stylesheet" href="style.css" />
+        <script>
+      let keysDown = {};
+window.onkeydown = function(keyboardshortcuts) {
+  keysDown[keyboardshortcuts.key] = true;
+
+  if (keysDown["Control"] && keysDown["c"]) {
+    //do what you want when control and c is pressed for example
+    console.log("Game Saved!");
+    save();
+  }
+  else if( keysDown["Control"] && keysDown["v"] ){
+    console.log("Game Loaded!");
+    load();
+  }
+}
+
+window.onkeyup = function(keyboardshortcuts) {
+  keysDown[keyboardshortcuts.key] = false;
+}
+        </script>
     </head>
 
     <body>
@@ -102,7 +121,9 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+                    <p class="update-name">New Waste of Time</p>
+                    <p class="update-bullet">Released Game</p>
+                    <p class="update-disc">Well, is this a waste of my time? I had a couple hours to spend.</p>
                 </div>
             </div>
 
@@ -136,13 +157,13 @@
             <!--<button class="menu" id="Acendance">Acend</button>-->
             <br /><br />
             <button class="loader buttons" onclick="load()">Load</button>
-            &NonBreakingSpace;
-            <button class="loader buttons" onclick="save()">Save</button>
+            
+            <button class="loader buttons" onclick="save()">Save</button>&NonBreakingSpace;<button class="loader buttons" onclick="reset()">Reset</button>
             <!--</div>-->
         </center>
         <div class="divs sectionLeft" id="sectionLeft"></div>
         <center>
-            <p id="prtzelBank">Pretzels: 0</p>
+            <p id="prtzlBank">Pretzels: 0</p>
             <input
                 type="image"
                 class="box"
