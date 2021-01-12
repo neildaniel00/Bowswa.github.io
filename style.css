@@ -1,5 +1,4 @@
 a:link {
-    color:powderblue;
     text-decoration: none;
 }
 a:visited {
@@ -30,14 +29,10 @@ body {
 }
 .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: brown;
     text-decoration: none;
 }
 .topnav a.current {
-    background-color: #4CAF50;
-    color: rgb(175, 0, 161);
-}
-.topnav a:hover.current {
-    background-color: rgb(175, 0, 161);
-    color: rgb(67, 204, 119);
+    background-color: cyan;
+    color: lime;
 }
