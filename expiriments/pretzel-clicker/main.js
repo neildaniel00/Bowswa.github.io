@@ -79,8 +79,7 @@ function updateBuildings() {
     updateGrandmas();
 };
 function updatePretzels() {
-    pretzelBankFixed = pretzelBank.toFixed(1);
-    document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBankFixed;
+    document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBank.toFixed(1);
 };
 function updateClickers() {
     document.getElementById('clicker').innerHTML = 'Clicker! ' + clickerAmount + ' Owned';
