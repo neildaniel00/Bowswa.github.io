@@ -151,7 +151,7 @@ function buyClicker() {
         pretzelBank = pretzelBank - clickerPrice;
         clickerAmount = clickerAmount + 1;
         clickerBuildAmount = clickerBuildAmount + 1;
-        pretzelsPSCalc()
+        priceClickers();
         updateClickers();
         updatePretzels();
     }else {
@@ -180,7 +180,7 @@ function buyGrandma() {
         pretzelBank = pretzelBank - grandmaPrice
         grandmaBakerAmount = grandmaBakerAmount + 1;
         grandmaBuildAmount = grandmaBuildAmount + 1;
-        pretzelsPSCalc()
+        priceGrandmas();
         updateGrandmas();
         updatePretzels();
     }else {
