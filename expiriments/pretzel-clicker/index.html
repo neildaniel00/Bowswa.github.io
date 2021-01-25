@@ -27,11 +27,8 @@ window.onkeyup = function(keyboardshortcuts) {
 
     <body>
         <div id="topBar">
-            <p class="warning">
-                The game is currently being changed in backend format. Bugs are
-                expected at first.
-            </p>
             <p>
+                <a href="https://discord.gg/RqSwaQTZn4">Game Discord</a><br>
                 Devs:
                 <a target="_blank" href="https://bowswa.github.io">Bowswa</a
                 > for all the code except CSS3 and <a href="https://neildaniel00.github.io" target="_blank"
@@ -121,6 +118,15 @@ window.onkeyup = function(keyboardshortcuts) {
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <p class="warning">This game is relatively new and still may have bugs. Please report them in the Discord.</p>
+                    <br>
+                    <p class="update-name">Bug Fix V1</p>
+                    <p class="update-bullet">Fixed pretzel click bug</p>
+                    <p class="update-bullet">Moved PPS(Pretzels Per Second) to a new calculation</p>
+                    <p class="update-bullet">Fixed pretzel bank storage</p>
+                    <p class="update-bullet">Fixed an issue with updating how many Grandmas you have in some cases</p>
+                    <p class="update-bullet">Fixed an issue with gramdma prices not updating in some cases</p>
+                    <br>
                     <p class="update-name">New Waste of Time</p>
                     <p class="update-bullet">Released Game</p>
                     <p class="update-disc">Well, is this a waste of my time? I had a couple hours to spend.</p>
@@ -163,7 +169,7 @@ window.onkeyup = function(keyboardshortcuts) {
         </center>
         <div class="divs sectionLeft" id="sectionLeft"></div>
         <center>
-            <p id="prtzlBank">Pretzels: 0</p>
+            <p id="prtzelBank">Pretzels: 0</p>
             <input
                 type="image"
                 class="box"
