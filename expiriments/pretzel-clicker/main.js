@@ -209,13 +209,13 @@ function sellGrandma() {
     }
 };
 function pretzelsPSCalc() {
-    if (clickerAmount = 0) {
+    if (clickerAmount === 0) {
         return;
     }else if (clickerAmount >= 1) {
         var clickerAddMath = clickerAmount * .1;
     }
 
-    if (grandmaBakerAmount = 0) {
+    if (grandmaBakerAmount === 0) {
         return;
     }else if (grandmaBakerAmount >= 1) {
         var grandmaAddMath = grandmaBakerAmount;
