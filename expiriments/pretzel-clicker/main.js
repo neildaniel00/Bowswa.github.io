@@ -173,8 +173,6 @@ function sellClicker() {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
 };
-function grandmaCalc() {
-};
 function buyGrandma() {
     if (pretzelBank < grandmaPrice) {
         alert('Umm, Something\'s missing :/');
@@ -206,15 +204,15 @@ function sellGrandma() {
 };
 function pretzelsPSCalc() {
     if (clickerAmount === 0) {
-        return;
+        var clickerAddMath = 0;
     }else if (clickerAmount >= 1) {
-        var clickerAddMath = clickerAmount * .1;
+        clickerAddMath = clickerAmount * .1;
     }
 
     if (grandmaBakerAmount === 0) {
-        return;
+        var grandmaAddMath = 0;
     }else if (grandmaBakerAmount >= 1) {
-        var grandmaAddMath = grandmaBakerAmount;
+        grandmaAddMath = grandmaBakerAmount;
     }
     PPS = grandmaAddMath + clickerAddMath;
 };
