@@ -226,13 +226,13 @@ function pretzelsPSCalc() {
     if (clickerAmount = 0) {
         return;
     }else if (clickerAmount >= 1) {
-        clickerAddMath = clickerAmount * .1;
+        var clickerAddMath = clickerAmount * .1;
     }
 
     if (grandmaBakerAmount = 0) {
         return;
     }else if (grandmaBakerAmount >= 1) {
-        grandmaAddMath = grandmaBakerAmount;
+        var grandmaAddMath = grandmaBakerAmount;
     }
     PPS = grandmaAddMath + clickerAddMath;
 };
