@@ -34,19 +34,6 @@ function load() {
     if (!gameVersion) {
         reset();
         return save();
-    }else if (gameVersion = 0.01) {
-        alert('Unfortunetly since you are coming from the 0.01 version of this game, if you somehow got it to work, your stored pretzels were not saved due to a bug. That is now fixed. Hope you like the game now!');
-        totalPretzelCount = localStorage.getItem('totalPretzelCount');
-        totalPretzelCount = parseInt(totalPretzelCount);
-
-        clickerAmount = localStorage.getItem('clickerAmount');
-        clickerAmount = parseInt(clickerAmount);
-        clickerBuildAmount = clickerAmount;
-
-        grandmaBakerAmount = localStorage.getItem('grandmaBakerAmount');
-        grandmaBakerAmount = parseInt(grandmaBakerAmount);
-        grandmaBuildAmount = grandmaBakerAmount;
-        updateAll();
     }else if (gameVersion = displayGameVersion) {
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
