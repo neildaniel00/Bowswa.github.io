@@ -147,7 +147,6 @@ function reset() {
     prestigeChallenge = 0;
     activePrestigePercent = 0;
 
-    displayGameVersion = 0.01;
     gameVersion = displayGameVersion;
     updateNormal();
     }
