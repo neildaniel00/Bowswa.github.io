@@ -85,7 +85,7 @@ function updateNormal() {
     updatePretzels();
     priceBuildings();
     updateClickers();
-    updateGrandma();
+    updateGrandmas();
 };
 function updateBuildings() {
     updateClickers();
