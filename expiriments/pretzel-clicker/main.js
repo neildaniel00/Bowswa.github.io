@@ -151,7 +151,7 @@ function buyClicker() {
         pretzelBank = pretzelBank - clickerPrice;
         clickerAmount = clickerAmount + 1;
         clickerBuildAmount = clickerBuildAmount + 1;
-        priceClickers();
+        pretzelsPSCalc()
         updateClickers();
         updatePretzels();
     }else {
@@ -182,13 +182,9 @@ function buyGrandma() {
         pretzelBank = pretzelBank - grandmaPrice
         grandmaBakerAmount = grandmaBakerAmount + 1;
         grandmaBuildAmount = grandmaBuildAmount + 1;
-        priceGrandmas();
+        pretzelsPSCalc()
         updateGrandmas();
         updatePretzels();
-        if (grandmaInterval === false) {
-            setInterval(grandmaCalc, 1000);
-            grandmaInterval = true;
-        }
     }else {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
