@@ -223,7 +223,7 @@ function pretzelsPSCalc() {
     PPS = grandmaAddMath + clickerAddMath;
 };
 function addPPS() {
-    if (PPS >= 1) {
+    if (PPS >= .1) {
         pretzelBank = pretzelBank + PPS;
         totalPretzelCount = totalPretzelCount + PPS;
         updatePretzels();
