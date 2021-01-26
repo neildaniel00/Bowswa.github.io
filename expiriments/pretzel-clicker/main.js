@@ -99,10 +99,14 @@ function priceBuildings() {
 function priceClickers() {
     clickerMath = Math.pow(1.25, clickerBuildAmount);
     clickerPrice = 15 * clickerMath;
+    clickerPrice = clickerPrice.toFixed(1);
+    clickerPrice = parseInt(clickerPrice);
 };
 function priceGrandmas() {
     grandmaMath = Math.pow(1.25, grandmaBuildAmount);
     grandmaPrice = 100 * grandmaMath;
+    grandmaPrice = grandmaPrice.toFixed(1);
+    grandmaPrice = parseInt(grandmaPrice);
 };
 function pretzelClicked() {
     pretzelBank = pretzelBank + PPC;
