@@ -24,6 +24,10 @@ body {
   transform: translateY(1px);
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 a {
   color: inherit;
 }
