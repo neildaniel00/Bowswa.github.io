@@ -28,7 +28,16 @@ window.onkeyup = function(keyboardshortcuts) {
     <body>
         <div id="topBar">
             <p>
-                <a href="https://discord.gg/RqSwaQTZn4">Game Discord</a><br>
+                <a href="https://discord.gg/RqSwaQTZn4" target="_blank">Game Discord</a>
+                <div onmouseover="showVersions()" onmouseout="hideVersions()" class="hoverer">
+                    Other Versions:
+                    <div class="links" id="versions">
+                        <br>
+                        <a href="beta/index.html">Beta</a>
+                    </div>
+                </div>
+            </p>
+            <p>
                 Devs:
                 <a target="_blank" href="https://bowswa.github.io">Bowswa</a
                 > for all the code except CSS3 and <a href="https://neildaniel00.github.io" target="_blank"
@@ -126,6 +135,7 @@ window.onkeyup = function(keyboardshortcuts) {
                     <p class="update-bullet">Fixed pretzel bank storage</p>
                     <p class="update-bullet">Fixed an issue with updating how many Grandmas you have in some cases</p>
                     <p class="update-bullet">Fixed an issue with gramdma prices not updating in some cases</p>
+                    <p class="shadow-bullet">Many shadow patches fixing bugs created in this update and adding styling</p>
                     <br>
                     <p class="update-name">New Waste of Time</p>
                     <p class="update-bullet">Released Game</p>

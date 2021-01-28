@@ -116,35 +116,37 @@ function pretzelClicked() {
 function reset() {
     reset1 = confirm('Are you sure you want to reset?');
     if (reset1 === true) {
-    reset2 = confirm('Once you do this, there is no going back!');
-    if (reset2 === true) {
-    pretzelBank = 0;
-    totalPretzelCount = 0;
-    PPC = 1;
+        reset2 = confirm('Once you do this, there is no going back!');
+        if (reset2 === true) {
+    
+            clearInterval(addPPS, 1000)
+            pretzelBank = 0;
+            totalPretzelCount = 0;
+            PPC = 1;
 
-    clickerAmount = 0;
-    clickerBuildAmount = 0;
-    clickerPrice = 15;
+            clickerAmount = 0;
+            clickerBuildAmount = 0;
+            clickerPrice = 15;
 
-    grandmaBakerAmount = 0;
-    grandmaBuildAmount = 0;
-    grandmaPrice = 100;
+            grandmaBakerAmount = 0;
+            grandmaBuildAmount = 0;
+            grandmaPrice = 100;
 
-    upgradeCount = 0;
-    achievementCount = 0;
+            upgradeCount = 0;
+            achievementCount = 0;
 
-    prestigeCount = 0;
-    prestigeMode = 0;
-    prestigeChallenge = 0;
-    activePrestigePercent = 0;
+            prestigeCount = 0;
+            prestigeMode = 0;
+            prestigeChallenge = 0;
+            activePrestigePercent = 0;
 
-    gameVersion = displayGameVersion;
-    updateNormal();
-    }
-    else {
-        alert('You made the right choice. Who would want to reset?')
-    }}
-        else {
+            gameVersion = displayGameVersion;
+            updateNormal();
+            setInterval(addPPS, 1000);
+        }else {
+            alert('You made the right choice. Who would want to reset?')
+        }
+    }else {
         alert('You made the right choice. Who would want to reset?')
     }
 };
@@ -228,6 +230,14 @@ function addPPS() {
     }else {
         return;
     }
+};
+function showVersions() {
+    var verBox = document.getElementById("versions");
+    verBox.style.display = "block";
+};
+function hideVersions() {
+    var verBox = document.getElementById("versions");
+    verBox.style.display = "none";
 };
 function processStart() {
     load();
