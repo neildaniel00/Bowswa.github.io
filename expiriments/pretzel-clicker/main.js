@@ -244,5 +244,6 @@ function processStart() {
     setInterval(save, 60000);
     setInterval(update5sec, 5000);
     setInterval(addPPS, 1000)
+    hideVersions()
 };
 window.onload = processStart();
