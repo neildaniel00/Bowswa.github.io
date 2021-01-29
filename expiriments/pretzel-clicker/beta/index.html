@@ -47,7 +47,11 @@ window.onkeyup = function(keyboardshortcuts) {
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+                    <div>
+                        <button class="loader buttons" onclick="load()">Load</button>
+                        <button class="loader buttons" onclick="save()">Save</button>
+                        <button class="loader buttons" onclick="reset()">Reset</button>
+                    </div>
                 </div>
             </div>
 
@@ -165,10 +169,6 @@ window.onkeyup = function(keyboardshortcuts) {
                 };
             </script>
             <!--<button class="menu" id="Acendance">Acend</button>-->
-            <br /><br />
-            <button class="loader buttons" onclick="load()">Load</button>
-            
-            <button class="loader buttons" onclick="save()">Save</button>&NonBreakingSpace;<button class="loader buttons" onclick="reset()">Reset</button>
             <!--</div>-->
         </center>
         <div class="divs sectionLeft" id="sectionLeft"></div>
