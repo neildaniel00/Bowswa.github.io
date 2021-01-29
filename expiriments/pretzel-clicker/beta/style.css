@@ -78,16 +78,6 @@ a {
   background-color: black;
   margin: 6px 0;
 }
-
-.sectionRight {
-  left: 0%;
-}
-.sectionMiddle {
-  left: 33%;
-}
-.sectionLeft {
-  left: 66%;
-}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */

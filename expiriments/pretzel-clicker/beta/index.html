@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pretzel Clicker</title>
+        <title>Pretzel Clicker Beta</title>
         <link rel="stylesheet" href="style.css" />
         <script>
-      let keysDown = {};
-window.onkeydown = function(keyboardshortcuts) {
-  keysDown[keyboardshortcuts.key] = true;
+            let keysDown = {};
+            window.onkeydown = function(keyboardshortcuts) {
+                keysDown[keyboardshortcuts.key] = true;
 
-  if (keysDown["Control"] && keysDown["c"]) {
-    //do what you want when control and c is pressed for example
-    console.log("Game Saved!");
-    save();
-  }
-  else if( keysDown["Control"] && keysDown["v"] ){
-    console.log("Game Loaded!");
-    load();
-  }
-}
+                if (keysDown["Control"] && keysDown["x"]) {
+                    console.log("Game Saved!");
+                    save();
+                }else if( keysDown["Control"] && keysDown["v"] ){
+                    console.log("Game Loaded!");
+                    load();
+                }
+            }
 
-window.onkeyup = function(keyboardshortcuts) {
-  keysDown[keyboardshortcuts.key] = false;
-}
+            window.onkeyup = function(keyboardshortcuts) {
+                keysDown[keyboardshortcuts.key] = false;
+            }
         </script>
     </head>
 
@@ -30,21 +28,36 @@ window.onkeyup = function(keyboardshortcuts) {
             <p>
                 <a href="https://bowswa.gihub.io" target="_blank">Bowswa</a> & <a href="https://neildaniel00.github.io" target="_blank">neildaniel00</a>
                 | <a href="https://discord.gg/RqSwaQTZn4" target="_blank">Game Discord</a>
-                <span class="hidden">sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span>
+                <span class="hidden">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span>
                 <span onmouseover="showVersions()" onmouseout="hideVersions()" class="hoverer">
                     Other Versions:
                     <div class="hover-content" id="versions">
-                        <a href="beta/index.html">Beta</a>
+                        <a href="../index.html">Live</a>
+                        <a href="/beta/index.html">Beta</a>
                     </div>
                 </span>
             </p>
         </div>
-         <div class="divs sectionMiddle" id="sectionMiddle"></div>
-        <center>
+
+        <div class="divs sectionTop" id="sectionTop"></div>
+
+        <div id="leftPart">
+            <p id="prtzelBank">Pretzels: 0</p>
+            <input
+                type="image"
+                class="box"
+                id="pretzel"
+                onclick="pretzelClicked()"
+                alt="Pretzel"
+                src="/expiriments/pretzel-clicker/beta/img/Pretzel.png"
+            />
+            <p id="version">Version:</p>
+        </div>
+        
+        <div class="divs sectionLeft" id="sectionLeft"></div>
+
             <button class="menu buttons" id="settings">Settings</button>
-            <!-- The Modal -->
             <div id="myModal" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <div>
@@ -56,26 +69,20 @@ window.onkeyup = function(keyboardshortcuts) {
             </div>
 
             <script>
-                // Get the modal
                 var modal = document.getElementById('myModal');
 
-                // Get the button that opens the modal
                 var btn = document.getElementById('settings');
 
-                // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName('close')[0];
 
-                // When the user clicks the button, open the modal
                 btn.onclick = function () {
                     modal.style.display = 'block';
                 };
 
-                // When the user clicks on <span> (x), close the modal
                 span.onclick = function () {
                     modal.style.display = 'none';
                 };
 
-                // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = 'none';
@@ -84,9 +91,7 @@ window.onkeyup = function(keyboardshortcuts) {
             </script>
 
             <button class="menu buttons" id="stats">Stats</button>
-            <!-- The Modal -->
             <div id="myModal2" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>Some text in the Modal..</p>
@@ -94,26 +99,20 @@ window.onkeyup = function(keyboardshortcuts) {
             </div>
 
             <script>
-                // Get the modal
                 var modal2 = document.getElementById('myModal2');
 
-                // Get the button that opens the modal
                 var btn2 = document.getElementById('stats');
 
-                // Get the <span> element that closes the modal
                 var span2 = document.getElementsByClassName('close')[1];
 
-                // When the user clicks the button, open the modal
                 btn2.onclick = function () {
                     modal2.style.display = 'block';
                 };
 
-                // When the user clicks on <span> (x), close the modal
                 span2.onclick = function () {
                     modal2.style.display = 'none';
                 };
 
-                // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal2) {
                         modal2.style.display = 'none';
@@ -122,7 +121,6 @@ window.onkeyup = function(keyboardshortcuts) {
             </script>
             <button class="menu buttons" id="changelog">Updates</button>
             <div id="myModal3" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p class="warning">This game is relatively new and still may have bugs. Please report them in the Discord.</p>
@@ -142,26 +140,20 @@ window.onkeyup = function(keyboardshortcuts) {
             </div>
 
             <script>
-                // Get the modal
                 var modal3 = document.getElementById('myModal3');
 
-                // Get the button that opens the modal
                 var btn3 = document.getElementById('changelog');
 
-                // Get the <span> element that closes the modal
                 var span3 = document.getElementsByClassName('close')[2];
 
-                // When the user clicks the button, open the modal
                 btn3.onclick = function () {
                     modal3.style.display = 'block';
                 };
 
-                // When the user clicks on <span> (x), close the modal
                 span3.onclick = function () {
                     modal3.style.display = 'none';
                 };
 
-                // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal3) {
                         modal3.style.display = 'none';
@@ -169,22 +161,6 @@ window.onkeyup = function(keyboardshortcuts) {
                 };
             </script>
             <!--<button class="menu" id="Acendance">Acend</button>-->
-            <!--</div>-->
-        </center>
-        <div class="divs sectionLeft" id="sectionLeft"></div>
-        <center>
-            <p id="prtzelBank">Pretzels: 0</p>
-            <input
-                type="image"
-                class="box"
-                id="pretzel"
-                onclick="pretzelClicked()"
-                alt="Pretzel"
-                src="/expiriments/pretzel-clicker/beta/img/Pretzel.png"
-            />
-            <p id="version">Version:</p>
-        </center>
-        <!--</div>-->
        
         <div class="divs sectionRight" id="sectionRight"></div>
         <center>
