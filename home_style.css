@@ -1,34 +1,41 @@
 a:link {
+    color: rgb(49, 209, 161);
     text-decoration: none;
 }
 a:visited {
-    color:blueviolet;
+    font-size: 13;
+    color:darkgoldenrod;
     text-decoration: none;
 }
 a:hover {
-    color:blue;
+    font-size: 20;
+    color: blue;
     text-decoration: underline;
 }
 body {
-    background-color: rgb(255, 238, 0);
-}
-.topnav {
-    background-color: crimson;
-    overflow: hidden;
-    font-size: 34px;
+    background-color: gold;
 }
 .topnav a:link {
     float: left;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color: rgb(49, 209, 161);
+    font-size: 43;
 }
 .topnav a:visited {
-    color:rgba(0, 119, 255, 0.685);
+    color:rgba(0, 255, 157, 0.685);
     text-decoration: none;
+    font-size: 43;
 }
 .topnav a:hover {
     background-color: #ddd;
     color: brown;
     text-decoration: none;
+    font-size: 52;
+}
+.topnav a.current {
+    background-color: cyan;
+    color: rgba(199, 73, 15, 0.767);
+    font-size: 47;
 }
