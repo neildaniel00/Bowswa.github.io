@@ -15,6 +15,11 @@ a:hover {
 body {
     background-color: gold;
 }
+.topnav {
+    background-color: crimson;
+    overflow: hidden;
+    font-size: 34px;
+}
 .topnav a:link {
     float: left;
     text-align: center;
