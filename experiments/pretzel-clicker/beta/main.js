@@ -2,6 +2,7 @@ var pretzelBank = 0;
 var totalPretzelCount = 0;
 var PPC = 1;
 var PPS = 0;
+var highestPPS = 0;
 
 var clickerAmount = 0;
 var clickerBuildAmount = 0;
@@ -10,6 +11,10 @@ var clickerPrice = 15;
 var grandmaBakerAmount = 0;
 var grandmaBuildAmount = 0;
 var grandmaPrice =  100;
+
+var grandpaBakerAmount = 0;
+var grandpaBuildAmount = 0;
+var grandpaPrice = 500;
 
 var upgradeCount = 0;
 var achievementCount = 0;
@@ -27,8 +32,10 @@ function save() {
     localStorage.setItem('gameVersion', displayGameVersion);
     localStorage.setItem('pretzelBank', pretzelBank);
     localStorage.setItem('totalPretzelCount', totalPretzelCount);
+    localStorage.setItem('highestPPS', highestPPS);
     localStorage.setItem('clickerAmount', clickerAmount);
     localStorage.setItem('grandmaBakerAmount', grandmaBakerAmount);
+    localStorage.setItem('grandpaBakerAmount', grandpaBakerAmount);
     console.log('Game Saved!');
 };
 function load() {
@@ -36,11 +43,14 @@ function load() {
         reset();
         save();
         return load();
-    }else if (gameVersion = displayGameVersion) {
+    }else if (gameVersion < displayGameVersion) {
+        if (window.location.href.indexOf('/beta')>-1) beta = true;
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
+        highestPPS = localStorage.getItem('highestPPS');
         pretzelBank = parseInt(pretzelBank);
         totalPretzelCount = parseInt(totalPretzelCount);
+        highestPPS = parseInt(highestPPS);
 
         clickerAmount = localStorage.getItem('clickerAmount');
         clickerAmount = parseInt(clickerAmount);
@@ -49,7 +59,33 @@ function load() {
         grandmaBakerAmount = localStorage.getItem('grandmaBakerAmount');
         grandmaBakerAmount = parseInt(grandmaBakerAmount);
         grandmaBuildAmount = grandmaBakerAmount;
+
+        grandpaBakerAmount = localStorage.getItem('grandpaBakerAmount');
+        grandpaBakerAmount = parseInt(grandpaBakerAmount);
+        grandpaBuildAmount = grandpaBakerAmount;
         updateAll();
+        return save();
+    }else if (gameVersion = displayGameVersion) {
+        if (window.location.href.indexOf('/beta')>-1) beta = true;
+        pretzelBank = localStorage.getItem('pretzelBank');
+        totalPretzelCount = localStorage.getItem('totalPretzelCount');
+        highestPPS = localStorage.getItem('highestPPS');
+        pretzelBank = parseInt(pretzelBank);
+        totalPretzelCount = parseInt(totalPretzelCount);
+        highestPPS = parseInt(highestPPS);
+
+        clickerAmount = localStorage.getItem('clickerAmount');
+        clickerAmount = parseInt(clickerAmount);
+        clickerBuildAmount = clickerAmount;
+
+        grandmaBakerAmount = localStorage.getItem('grandmaBakerAmount');
+        grandmaBakerAmount = parseInt(grandmaBakerAmount);
+        grandmaBuildAmount = grandmaBakerAmount;
+
+        grandpaBakerAmount = localStorage.getItem('grandpaBakerAmount');
+        grandpaBakerAmount = parseInt(grandpaBakerAmount);
+        grandpaBuildAmount = grandpaBakerAmount;
+        return updateAll();
     }else if (gameVersion > displayGameVersion) {
         alert('Whoops! This save code if from a future version. Can we have your time machine?');
         reset();
@@ -96,7 +132,11 @@ function updateGrandmas() {
     document.getElementById('grandma_price').innerHTML = grandmaPrice + ' Pretzels';
 };
 function updateVersion() {
-    document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
+    if (beta = false) {
+        document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
+    }else if (beta = true) {
+        document.getElementById('version').innerHTML = 'Version:' + displayGameVersion + 'BETA';
+    }
 };
 function priceBuildings() {
     priceClickers();
