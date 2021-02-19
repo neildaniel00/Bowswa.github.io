@@ -135,7 +135,7 @@ function updateVersion() {
     if (beta = false) {
         document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion;
     }else if (beta = true) {
-        document.getElementById('version').innerHTML = 'Version:' + displayGameVersion + 'BETA';
+        document.getElementById('version').innerHTML = 'Version: ' + displayGameVersion + ' BETA';
     }
 };
 function priceBuildings() {
