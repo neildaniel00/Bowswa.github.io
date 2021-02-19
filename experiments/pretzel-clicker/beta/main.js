@@ -20,7 +20,7 @@ var prestigeChallenge = 0;
 var activePrestigePercent = 0;
 
 var beta = false;
-var displayGameVersion = 0.02;
+var displayGameVersion = 0.03;
 var gameVersion = localStorage.getItem('gameVersion');
 
 function save() {
