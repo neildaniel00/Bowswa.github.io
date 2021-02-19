@@ -34,7 +34,8 @@ function save() {
 function load() {
     if (!gameVersion) {
         reset();
-        return save();
+        save();
+        load();
     }else if (gameVersion = displayGameVersion) {
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
@@ -52,9 +53,13 @@ function load() {
     }else if (gameVersion > displayGameVersion) {
         alert('Whoops! This save code if from a future version. Can we have your time machine?');
         reset();
+        save();
+        load();
     }else {
         alert('Well this sucks. Your save code is all messed up! Wha happened?')
         reset();
+        save();
+        load();
     }
 };
 function update5sec() {
@@ -161,6 +166,7 @@ function buyClicker() {
         priceClickers();
         updateClickers();
         updatePretzels();
+        pretzelsPSCalc();
     }else {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
@@ -176,6 +182,7 @@ function sellClicker() {
         priceClickers();
         updateClickers();
         updatePretzels();
+        pretzelsPSCalc();
     }else {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
@@ -190,6 +197,7 @@ function buyGrandma() {
         priceGrandmas();
         updateGrandmas();
         updatePretzels();
+        pretzelsPSCalc();
     }else {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
@@ -205,6 +213,7 @@ function sellGrandma() {
         priceGrandmas();
         updateGrandmas();
         updatePretzels();
+        pretzelsPSCalc();
     }else {
         alert('Huh. Unknown Error. Please report this with your browser console logs.', 'If you do not know how do do this, please do not close your game until you do.');
     }
