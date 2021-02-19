@@ -35,7 +35,7 @@ function load() {
     if (!gameVersion) {
         reset();
         save();
-        load();
+        return load();
     }else if (gameVersion = displayGameVersion) {
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
@@ -54,12 +54,12 @@ function load() {
         alert('Whoops! This save code if from a future version. Can we have your time machine?');
         reset();
         save();
-        load();
+        return load();
     }else {
         alert('Well this sucks. Your save code is all messed up! Wha happened?')
         reset();
         save();
-        load();
+        return load();
     }
 };
 function update5sec() {
