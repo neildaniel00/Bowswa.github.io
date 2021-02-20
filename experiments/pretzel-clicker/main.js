@@ -231,6 +231,10 @@ function addPPS() {
         return;
     }
 };
+function hideVersions() {
+    var verBox = document.getElementById("versions");
+    verBox.style.display = "none";
+};
 function processStart() {
     load();
     setInterval(save, 60000);
