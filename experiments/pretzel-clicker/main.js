@@ -231,14 +231,6 @@ function addPPS() {
         return;
     }
 };
-function showVersions() {
-    var verBox = document.getElementById("versions");
-    verBox.style.display = "block";
-};
-function hideVersions() {
-    var verBox = document.getElementById("versions");
-    verBox.style.display = "none";
-};
 function processStart() {
     load();
     setInterval(save, 60000);
