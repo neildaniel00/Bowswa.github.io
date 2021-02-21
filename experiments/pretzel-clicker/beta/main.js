@@ -45,6 +45,15 @@ function load() {
         return load();
     }else if (gameVersion < displayGameVersion) {
         if (window.location.href.indexOf('/beta')>-1) beta = true;
+
+        if (beta = true) {
+            var verBox = document.getElementById("beta");
+            verBox.style.display = "hidden";
+        }else if (beta = false) {
+            var verBox = document.getElementById("live");
+            verBox.style.display = "hidden";
+        }
+
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
         highestPPS = localStorage.getItem('highestPPS');
@@ -67,6 +76,15 @@ function load() {
         return save();
     }else if (gameVersion = displayGameVersion) {
         if (window.location.href.indexOf('/beta')>-1) beta = true;
+
+        if (beta = true) {
+            var verBox = document.getElementById("beta");
+            verBox.style.display = "hidden";
+        }else if (beta = false) {
+            var verBox = document.getElementById("live");
+            verBox.style.display = "hidden";
+        }
+        
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
         highestPPS = localStorage.getItem('highestPPS');
@@ -280,10 +298,6 @@ function addPPS() {
     }else {
         return;
     }
-};
-function showVersions() {
-    var verBox = document.getElementById("versions");
-    verBox.style.display = "block";
 };
 function hideVersions() {
     var verBox = document.getElementById("versions");
