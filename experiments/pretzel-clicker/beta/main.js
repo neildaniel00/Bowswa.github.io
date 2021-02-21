@@ -48,10 +48,10 @@ function load() {
 
         if (beta = true) {
             var verBox = document.getElementById("beta");
-            verBox.style.display = "hidden";
+            verBox.style.display = "none";
         }else if (beta = false) {
             var verBox = document.getElementById("live");
-            verBox.style.display = "hidden";
+            verBox.style.display = "none";
         }
 
         pretzelBank = localStorage.getItem('pretzelBank');
@@ -84,7 +84,7 @@ function load() {
             var verBox = document.getElementById("live");
             verBox.style.display = "hidden";
         }
-        
+
         pretzelBank = localStorage.getItem('pretzelBank');
         totalPretzelCount = localStorage.getItem('totalPretzelCount');
         highestPPS = localStorage.getItem('highestPPS');
@@ -299,15 +299,10 @@ function addPPS() {
         return;
     }
 };
-function hideVersions() {
-    var verBox = document.getElementById("versions");
-    verBox.style.display = "none";
-};
 function processStart() {
     load();
     setInterval(save, 60000);
     setInterval(update5sec, 5000);
     setInterval(addPPS, 1000)
-    hideVersions()
 };
 window.onload = processStart();
