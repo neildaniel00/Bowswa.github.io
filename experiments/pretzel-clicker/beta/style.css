@@ -69,11 +69,13 @@ button:active {
 }
 
 .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.other-versions {
   float: right;
   text-align: right;
-  position: relative;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
