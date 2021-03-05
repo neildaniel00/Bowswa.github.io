@@ -4,6 +4,10 @@ body {
   -moz-transform: scale(1);
   transform: scale(1);
 }
+.other-versions {
+  float: right;
+text-align: right;
+}
 .container {
   width: 100%;
   height: 100%;
