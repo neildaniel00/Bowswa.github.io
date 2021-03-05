@@ -4,9 +4,9 @@ body {
   -moz-transform: scale(1);
   transform: scale(1);
 }
-.other-versions {
-  float: right;
-text-align: right;
+.links {
+  float: left;
+  text-align: left;
 }
 .container {
   width: 100%;
@@ -69,8 +69,9 @@ button:active {
 }
 
 .dropdown {
+  float: right;
+  text-align: right;
   position: relative;
-  display: inline-block;
 }
 
 .dropdown-content {
