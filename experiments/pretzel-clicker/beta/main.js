@@ -165,12 +165,18 @@ function priceClickers() {
     clickerPrice = 15 * clickerMath;
     clickerPrice = clickerPrice.toFixed(1);
     clickerPrice = parseInt(clickerPrice);
+    if (clickerPrice === 666 || clickerPrice === 6666 || clickerPrice === 66666 || clickerPrice === 666666) {
+        clickerPrice = clickerPrice + 1;
+    }
 };
 function priceGrandmas() {
     grandmaMath = Math.pow(1.25, grandmaBuildAmount);
     grandmaPrice = 100 * grandmaMath;
     grandmaPrice = grandmaPrice.toFixed(1);
     grandmaPrice = parseInt(grandmaPrice);
+    if (grandmaPrice === 666 || grandmaPrice === 6666 || grandmaPrice === 66666 || grandmaPrice === 666666) {
+        grandmaPrice = grandmaPrice + 1;
+    }
 };
 function pretzelClicked() {
     pretzelBank = pretzelBank + PPC;
