@@ -68,16 +68,14 @@ button:active {
   transform: translateY(1px);
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 .other-versions {
   float: right;
   text-align: right;
+  position: relative;
+  display: inline-block;
 }
 .dropdown-content {
-  display: hidden;
+  display: none;
   position: absolute;
   background-color: #FFFFFF;
   min-width: 160px;
