@@ -74,7 +74,7 @@ button:active {
   position: relative;
 }
 .dropdown-content {
-  display: none;
+  display: hidden;
   position: absolute;
   background-color: #FFFFFF;
   min-width: 160px;
