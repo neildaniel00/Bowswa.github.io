@@ -72,7 +72,6 @@ button:active {
   float: right;
   text-align: right;
   position: relative;
-  display: inline-block;
 }
 .dropdown-content {
   display: none;
