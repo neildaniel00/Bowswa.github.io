@@ -204,6 +204,7 @@ function updateGrandmas() {
 };
 function grandpaSimpCalc() {
     grandmaSimpRaw = grandmaBakerAmount;
+    grandpaSimpMs = 0;
     
     while (grandmaSimpRaw >= 25) {
         grandmaSimpRaw = grandmaSimpRaw - 25;
