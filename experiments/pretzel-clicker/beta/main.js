@@ -89,7 +89,7 @@ function load() {
 
         updateAll();
         return save();
-    }else if (gameVersion = displayGameVersion) {
+    }else if (BgameVersion = displayGameVersion) {
         if (window.location.href.indexOf('/beta')>-1) beta = true;
 
         if (beta = true) {
