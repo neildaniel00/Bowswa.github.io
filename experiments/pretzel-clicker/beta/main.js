@@ -87,9 +87,6 @@ function load() {
         grandmaBakerAmount = parseInt(grandmaBakerAmount);
         grandmaBuildAmount = grandmaBakerAmount;
 
-        grandpaBakerAmount = localStorage.getItem('grandpaBakerAmount');
-        grandpaBakerAmount = parseInt(grandpaBakerAmount);
-        grandpaBuildAmount = grandpaBakerAmount;
         updateAll();
         return save();
     }else if (gameVersion = displayGameVersion) {
