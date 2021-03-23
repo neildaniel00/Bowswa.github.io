@@ -417,10 +417,10 @@ function pretzelsPSCalc() {
     }else if (grandpaBakerAmount >= 1) {
         grandpaPPG = 5 + grandpaSimpMs;
         grandpaAddMath = grandmaBakerAmount * grandpaPPG;
+        console.log(grandpaPPG);
     }
 
     PPS = grandmaAddMath + clickerAddMath + grandpaAddMath;
-    console.log(grandpaPPG);
     console.log(grandpaAddMath);
 };
 function addPPS() {
