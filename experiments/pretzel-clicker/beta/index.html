@@ -116,6 +116,14 @@
             <span class="close">&times;</span>
             <p class="warning">Please report any bugs in the <a href="https://discord.gg/RqSwaQTZn4" target="_blank">Discord.</a></p>
             <br>
+            <p class="update-name">Ole' Gyzers' Club</p>
+            <p class="update-disc">3/22/2021 0.04 BETA</p>
+            <p class="update-bullet">Separated the Beta and Live data storage in your LocalStorage. You should still import properly from the previous linked version.</p>
+            <p class="update-bullet">Added Grandpas to the game in full. This is a BETA so you might experience some bugs at first.</p>
+            <p class="update-bullet">Cleaned up some code.</p>
+            <p class="update-bullet">Worked on the other versions Tab. I bugged it in a small style bug fix for mobile. I am still looking into this issue.</p>
+            <p class="warning">THIS UPDATE HAS A HIGH CHANCE OF BEING BROKEN AT FIRST!!! WHEN THIS MESSAGE IS GONE/REPLACED ALL ISSUES ARE FIXED!!!</p>
+            <br>
             <p class="update-name">I said a Broom-Sweepa-Broom!</p>
             <p class="update-disc">2/18/2021 0.03 BETA</p>
             <p class="update-bullet">Lots of styling improvements. This is the final layout I will use.</p>
@@ -162,21 +170,24 @@
       <div class="rightpane">
         <p id="clicker">Clicker! 0 Owned</p>
         <p id="clicker_disc">Autoclicks the Pretzel every 10 seconds.</p>
-        <p id="clicker_price">15 Pretzels</p>
+        <p id="clicker_price">Cost: 15 Pretzels</p>
         <button class="buy buttons" onclick="buyClicker()">Buy</button>
         &NonBreakingSpace;
         <button class="sell buttons" onclick="sellClicker()">Sell</button>
         <br>
         <p id="grandma_baker">Grandma Baker! 0 Owned</p>
         <p id="grandma_baker_disc">Bakes a pretzel every single second.</p>
-        <p id="grandma_price">100 Pretzels</p>
+        <p id="grandma_price">Cost: 100 Pretzels</p>
         <button class="buy buttons" onclick="buyGrandma()">Buy</button>
         &NonBreakingSpace;
         <button class="sell buttons" onclick="sellGrandma()">Sell</button>
         <br>
-        <p>NOTE: Grandpas are in development and not purchasable yet!</p>
         <p id="grandpa_baker">Grandpa Baker! 0 Owned</p>
-        <p id="grandpa_baker_disc" title="Special Trait: Earn an extra 5 Pretzels per Grandpa for every 25 Grandmas!">Bakes 2 Pretzels every second. Suffers from SIMP! special buff addiction. </p>
+        <p id="grandpa_baker_disc" title="SIMP Addiction SB: Earn an extra 2 Pretzels per Grandpa for every 25 Grandmas!">Bakes 5 Pretzels every second. Suffers from SIMP Addiction.</p>
+        <p id="grandpa_baker_price">Cost: 500 Pretzels</p>
+        <button class="buy buttons" onclick="buyGrandmpa()">Buy</button>
+        &NonBreakingSpace;
+        <button class="sell buttons" onclick="sellGrandpa()">Sell</button>
       </div>
     </div>
     <script src="main.js"></script>
