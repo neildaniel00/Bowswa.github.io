@@ -184,7 +184,7 @@ function updateClickers() {
         clickerPrice = clickerPrice + 1;
     }
     
-    document.getElementById('clicker_price').innerHTML = 'Cost:' + clickerPrice + ' Pretzels';
+    document.getElementById('clicker_price').innerHTML = 'Cost: ' + clickerPrice + ' Pretzels';
 };
 function updateGrandmas() {
     document.getElementById('grandma_baker').innerHTML = 'Grandma Baker! ' + grandmaBakerAmount + ' Owned';
@@ -197,7 +197,7 @@ function updateGrandmas() {
         grandmaPrice = grandmaPrice + 1;
     }
 
-    document.getElementById('grandma_price').innerHTML = 'Cost:' + grandmaPrice + ' Pretzels';
+    document.getElementById('grandma_price').innerHTML = 'Cost: ' + grandmaPrice + ' Pretzels';
 
     grandpaSimpCalc();
 };
@@ -211,7 +211,7 @@ function grandpaSimpCalc() {
     updateGrandpas();
 }
 function updateGrandpas() {
-    document.getElementById('grandpa_baker').innerHTML = 'Grandpa Baker!' + grandpaBakerAmount + ' Owned';
+    document.getElementById('grandpa_baker').innerHTML = 'Grandpa Baker! ' + grandpaBakerAmount + ' Owned';
 
     grandpaMath = Math.pow(1.25, grandpaBuildAmount);
     grandpaPrice = 500 * grandpaMath;
@@ -221,7 +221,7 @@ function updateGrandpas() {
         grandpaPrice = grandpaPrice + 1;
     }
 
-    document.getElementById('grandpa_baker_price').innerHTML = 'Cost:' + grandpaPrice + ' Pretzels';
+    document.getElementById('grandpa_baker_price').innerHTML = 'Cost: ' + grandpaPrice + ' Pretzels';
 };
 function updateVersion() {
     if (beta = false) {
