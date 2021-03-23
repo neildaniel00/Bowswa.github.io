@@ -420,6 +420,8 @@ function pretzelsPSCalc() {
     }
 
     PPS = grandmaAddMath + clickerAddMath + grandpaAddMath;
+    console.log(grandpaPPG);
+    console.log(grandpaAddMath);
 };
 function addPPS() {
     if (PPS >= .1) {
