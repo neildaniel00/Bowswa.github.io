@@ -29,6 +29,7 @@ var activePrestigePercent = 0;
 var beta = false;
 var displayGameVersion = 0.04;
 var gameVersion = localStorage.getItem('gameVersion');
+var BgameVersion = localStorage.getItem('BgameVersion');
 
 function save() {
     if (window.location.href.indexOf('/beta')>-1) beta = true;
