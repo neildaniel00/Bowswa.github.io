@@ -7,6 +7,7 @@
 <html>
   <head>
     <title>Happy Birthday @name! From Bowswa!</title>
+    <link rel="shortcut icon" href="media/Birthday_Caik.png">
     <link
       rel="icon"
       type="image/png"
@@ -160,6 +161,68 @@
         animation: flicker 1s ease-in-out alternate infinite;
       }
 
+      @-webkit-keyframes sheen {
+        0% {
+          transform: skewY(-45deg) translateX(0);
+        }
+        100% {
+          transform: skewY(-45deg) translateX(12.5em);
+        }
+      }
+      @keyframes sheen {
+        0% {
+          transform: skewY(-45deg) translateX(0);
+        }
+        100% {
+          transform: skewY(-45deg) translateX(12.5em);
+        }
+      }
+
+      button{
+        border: none;
+        background-color: inherit;
+      }
+      button {
+        padding: 0.75em 2em;
+        text-align: center;
+        text-decoration: none;
+        color: #2194e0;
+        border: 2px solid #2194e0;
+        font-size: 24px;
+        display: inline-block;
+        border-radius: 0.3em;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+      button:before {
+        content: '';
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(0);
+        transition: none;
+      }
+      button:hover {
+        background-color: #2194e0;
+        color: #fff;
+        border-bottom: 4px solid #1977b5;
+      }
+      button:hover:before {
+        transform: skewX(-45deg) translateX(13.5em);
+        transition: all 0.5s ease-in-out;
+      }
+      button:active {
+        transform: translateY(2px);
+        background-color: #2194e0;
+        color: #fff;
+        border-bottom: 4px solid #1977b5;
+      }
+
       @keyframes flicker {
         0% {
           transform: skewX(5deg);
@@ -194,7 +257,7 @@
       }
       @keyframes bounce {
         0% {
-          color: rebeccapurple;
+          color: darkblue;
         }
         100% {
           color: lime;
@@ -268,7 +331,6 @@
         animation-delay: 0.7s;
       }
     </style>
-    <script></script>
   </head>
 
   <body>
