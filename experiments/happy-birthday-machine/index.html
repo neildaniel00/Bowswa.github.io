@@ -11,6 +11,7 @@
       function setName() {
         var name = document.getElementById('user').value;
         localStorage.setItem('BdayPerson', name);
+        window.reload();
       };
       if (!localStorage.getItem('BdayPerson')) {
       }else{
