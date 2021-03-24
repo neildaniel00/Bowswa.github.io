@@ -193,7 +193,11 @@
         }
       }
       @keyframes bounce {
+        0% {
+          color: rebeccapurple;
+        }
         100% {
+          color: lime;
           top: -20px;
           text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
             0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
@@ -210,7 +214,6 @@
         top: 20px;
         display: inline-block;
         animation: bounce 0.3s ease infinite alternate;
-        animation: one 1.0s infinite;
         color: #fff;
         text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
           0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
@@ -259,14 +262,6 @@
       }
       h1 span:nth-child(17) {
         animation-delay: 0.7s;
-      }
-      @keyframes one {
-        0% {
-          color: rebeccapurple;
-        }
-        100% {
-          color: lime;
-        }
       }
     </style>
     <script></script>
