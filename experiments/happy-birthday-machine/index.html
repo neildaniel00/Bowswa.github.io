@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bowswa's Happy BDay Machine</title>
+  </head>
+  <body>
+    <input id="user" class="inputty" type="text" placeholder="BDay Person">
+    <button type="button" class="box buttons" onclick="setName()">
+      &gt;Submit Name&lt;</button>
+    <script>
+      function setName() {
+        var name = document.getElementById('user').value;
+        localStorage.setItem('BdayPerson', name);
+      };
+      if (!localStorage.geItem('BdayPerson')) {
+        return;
+      }else{
+        location.replace('https://bowswa.github.io/experiments/happy-birthday-machine/birthday.html');
+      }
+    </script>
+  </body>
+</html>
