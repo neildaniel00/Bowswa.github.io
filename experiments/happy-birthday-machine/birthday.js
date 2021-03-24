@@ -1,6 +1,6 @@
 function webLoad() {
     var bDayName = localStorage.getItem('BdayPerson');
-    document.title = 'Happy Birthday ' + bDayName + '!'
+    document.title = 'Happy Birthday ' + bDayName + '!';
     document.getElementById('BDayName').innerHTML = bDayName
 }
 function resetName() {
