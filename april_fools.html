@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <head>
-    <title>APRIL FOOLS!!!!!!</title>
+  <title>APRIL FOOLS!!!!!!</title>
+  <style>
+    .one {
+        visibility: hidden;
+    }
+  </style>
 </head>
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>April fools! Click <a href="https://www.youtube.com/watch?v=d1YBv2mWll0" target="_blank">here</a> to get a Rick Roll free link</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p class="one">April Fools! Click the button below to get a Rick Roll free link!</p>
+  <button type="button" onclick="redirectOne()">Click!</button>
+  <p>April fools! Click <a href="https://www.youtube.com/watch?v=d1YBv2mWll0" target="_blank">here</a> to get a Rick Roll free link</p>
+  <br>
+  <p class="one">Sorry! You need a secret password to access the site! Type it below to enter it! If your wrong though...</p>
+  <input id="user" class="one" type="text" placeholder="password!">
+  <button type="button" class="one" onclick="checkpass()">
+    &gt;Submit Name&lt;</button>
+  <script src="af.js"></script>
 </body>
