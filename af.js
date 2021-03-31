@@ -20,3 +20,4 @@ function winLoad() {
     return;
   }
 }
+window.onload = winLoad();
