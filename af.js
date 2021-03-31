@@ -1,10 +1,10 @@
 function checkPass() {
   var pass = document.getElementById('user').value;
-  if (pass = 'Happy Birthday Opsy!') {
+  if (!pass === 'Happy Birthday Opsy!') {
+    return redirect();
+  }else if (pass === 'Happy Birthday Opsy!') {
     localStorage.setItem('RRPassed', true);
     location.replace('https://bowswa.github.io/index.html');
-  }else {
-    redirect();
   }
 };
 function redirect() {
