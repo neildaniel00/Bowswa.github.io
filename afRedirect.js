@@ -3,7 +3,7 @@ function redirect() {
   if (check = true) {
     return;
   }else {
-    location.replace('https://bowswa.github.io/april_foolsS');
+    location.replace('https://bowswa.github.io/april_fools.html');
   }
 };
 window.onload = redirect();
