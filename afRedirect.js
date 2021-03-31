@@ -6,4 +6,4 @@ function redirect() {
     location.replace('https://bowswa.github.io/april_foolsS');
   }
 };
-window.onload(redirect());
+window.onload = redirect();
