@@ -4,7 +4,7 @@ function checkPass() {
     return redirect();
   }else if (pass === 'Happy Birthday Opsy!') {
     localStorage.setItem('RRPassed', true);
-    location.replace('https://bowswa.github.io/index.html');
+    location.replace('https://bowswa.github.io/home.html');
   }
 };
 function redirect() {
