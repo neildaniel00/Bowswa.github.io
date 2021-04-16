@@ -417,7 +417,7 @@ function pretzelsPSCalc() {
         var grandpaAddMath = 0;
     }else if (grandpaBakerAmount >= 1) {
         grandpaPPG = 5 + grandpaSimpMs;
-        grandpaAddMath = grandmaBakerAmount * grandpaPPG;
+        grandpaAddMath = grandpaBakerAmount * grandpaPPG;
         console.log(grandpaPPG);
     }
 

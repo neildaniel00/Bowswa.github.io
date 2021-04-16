@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bowswa's Happy BDay Machine</title>
+    <link rel="shortcut icon" href="media/Birthday_Caik.png">
+    <style>
+      .topnav {
+        background-color: crimson;
+        overflow: hidden;
+        font-size: 34px;
+      }
+      .topnav a:link {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: rgb(49, 209, 161);
+        font-size: 43;
+      }
+      .topnav a:visited {
+        color:rgba(0, 255, 157, 0.685);
+        text-decoration: none;
+        font-size: 43;
+      }
+      .topnav a:hover {
+        background-color: #ddd;
+        color: brown;
+        text-decoration: none;
+        font-size: 52;
+      }
+      .topnav a.current {
+        background-color: cyan;
+        color: rgba(199, 73, 15, 0.767);
+        font-size: 47;
+      }
+      
+      @-webkit-keyframes sheen {
+        0% {
+          transform: skewY(-45deg) translateX(0);
+        }
+        100% {
+          transform: skewY(-45deg) translateX(12.5em);
+        }
+      }
+      @keyframes sheen {
+        0% {
+          transform: skewY(-45deg) translateX(0);
+        }
+        100% {
+          transform: skewY(-45deg) translateX(12.5em);
+        }
+      }
+
+      button{
+        border: none;
+        background-color: inherit;
+      }
+      button {
+        padding: 0.75em 2em;
+        text-align: center;
+        text-decoration: none;
+        color: #2194e0;
+        border: 2px solid #2194e0;
+        font-size: 24px;
+        display: inline-block;
+        border-radius: 0.3em;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+      button:before {
+        content: '';
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(0);
+        transition: none;
+      }
+      button:hover {
+        background-color: #2194e0;
+        color: #fff;
+        border-bottom: 4px solid #1977b5;
+      }
+      button:hover:before {
+        transform: skewX(-45deg) translateX(13.5em);
+        transition: all 0.5s ease-in-out;
+      }
+      button:active {
+        transform: translateY(2px);
+        background-color: #2194e0;
+        color: #fff;
+        border-bottom: 4px solid #1977b5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="../../index.html">Home</a>
+      <a href="../../forums.html">Forums</a>
+      <a href="../../about.html">About</a>
+      <a href="../../apps.html">A N' G</a>
+    </div>
+    <input id="user" class="inputty" type="text" placeholder="BDay Person">
+    <input id="checkbox" onclick="toggleColors()" class="inputty" type="checkbox">
+    <input id="color1" class="colorOptions" type="color" style="display:hidden">
+    <input id="color2" class="colorOptions" type="color" style="display:hidden">
+    <button type="button" class="box buttons" onclick="submit()">
+      &gt;Submit data!&lt;</button>
+    <script>
+      function toggleColors() {
+        var colorStatus = false
+        colorStatus = localStorage.getItem('colorStatus')
+        if (colorStatus === false) {
+          document.getElementsByClass('colorOptions').style.display = 'visable';
+          localStorage.setItem('colorStatus', true);
+        }else if (colorStatus === true) {
+          document.getElementsByClass('colorOptions').style.display = 'hidden';
+          localStorage.setItem('colorStatus', false);
+
+        }
+      };
+      function submit() {
+        var name = document.getElementById('user').value;
+        if (!name) {
+          return alert('You must enter a name!');
+        }else if (name) {
+          localStorage.setItem('BdayPerson', name);
+        }else {
+          return alert('Unknown error. If this keeps happening please report on my discord!')
+        }
+
+        var color1 = document.getElementById('color1').value;
+        var color2 = document.getElementById('color2').value;
+        if (colorStatus === false) {
+          return location.reload();
+        }else if (colorStatus === true && !color1 || !color2) {
+          return alert('You must choose both colors!');
+        }else if (colorStatus === true && color1 && color2) {
+          localStorage.setItem('color1', color1);
+          localStorage.setItem('color2', color2);
+        }else {
+          return alert('Unknown error. If this keeps happening please report on my discord!')
+        }
+        location.reload();
+      };
+      if (!localStorage.getItem('BdayPerson')) {
+      }else{
+        location.replace('https://bowswa.github.io/experiments/happy-birthday-machine/birthday.html');
+      }
+    </script>
+  </body>
+</html>
