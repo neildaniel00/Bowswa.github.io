@@ -114,7 +114,7 @@
       function toggleColors() {
         var colorStatus = false
         colorStatus = localStorage.getItem('colorStatus')
-        if (colorStatus === false) {
+        if (colorStatus === false || !colorStatus) {
           document.getElementsByClass('colorOptions').style.display = 'block';
           localStorage.setItem('colorStatus', true);
         }else if (colorStatus === true) {
@@ -135,7 +135,7 @@
 
         var color1 = document.getElementById('color1').value;
         var color2 = document.getElementById('color2').value;
-        if (colorStatus === false || !colorStatus) {
+        if (colorStatus === false ||) {
           return location.reload();
         }else if (colorStatus === true && !color1 || !color2) {
           return alert('You must choose both colors!');
