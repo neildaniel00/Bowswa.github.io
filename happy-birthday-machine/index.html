@@ -135,7 +135,7 @@
 
         var color1 = document.getElementById('color1').value;
         var color2 = document.getElementById('color2').value;
-        if (colorStatus === false) {
+        if (colorStatus === false || !colorStatus) {
           return location.reload();
         }else if (colorStatus === true && !color1 || !color2) {
           return alert('You must choose both colors!');
