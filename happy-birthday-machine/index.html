@@ -106,8 +106,8 @@
     </div>
     <input id="user" class="inputty" type="text" placeholder="BDay Person">
     <input id="checkbox" onclick="toggleColors()" class="inputty" type="checkbox">
-    <input id="color1" class="colorOptions" type="color" style="display:hidden">
-    <input id="color2" class="colorOptions" type="color" style="display:hidden">
+    <input id="color1" class="colorOptions" type="color" style="display:none">
+    <input id="color2" class="colorOptions" type="color" style="display:none">
     <button type="button" class="box buttons" onclick="submit()">
       &gt;Submit data!&lt;</button>
     <script>
@@ -115,10 +115,10 @@
         var colorStatus = false
         colorStatus = localStorage.getItem('colorStatus')
         if (colorStatus === false) {
-          document.getElementsByClass('colorOptions').style.display = 'visable';
+          document.getElementsByClass('colorOptions').style.display = 'block';
           localStorage.setItem('colorStatus', true);
         }else if (colorStatus === true) {
-          document.getElementsByClass('colorOptions').style.display = 'hidden';
+          document.getElementsByClass('colorOptions').style.display = 'none';
           localStorage.setItem('colorStatus', false);
 
         }
