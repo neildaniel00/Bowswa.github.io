@@ -28,20 +28,7 @@ function resetName() {
   setTimeout(function() { location.replace('https://bowswa.github.io/happy-birthday-machine/index.html'); }, 4000);
 };
 function stop() {
-  var player = document.getElementById('bday');
-  toggle(1);
+  audio = document.getElementById('bday');
+  audio.pause();
 };
-function toggle(state) {
-
-  var player = document.getElementById('bday');
-  var src = "http://192.81.248.91:8159/;";
-
-  switch(state) {
-    case 1:
-      player.pause();
-      player.currentTime = 0;
-      player.src = '';
-      break;
-  }
-}
 window.onload = webLoad();
