@@ -24,7 +24,13 @@ function webLoad() {
     }
 };
 function resetName() {
-    localStorage.removeItem('BdayPerson')
-    location.replace('https://bowswa.github.io/experiments/happy-birthday-machine/index.html');
+    localStorage.removeItem('BdayPerson');
+    var end = new Audio('media/windowsXPshutdown.mp3');
+    end.play();
+    setTimeout(function() { location.replace('https://bowswa.github.io/experiments/happy-birthday-machine/index.html'); }, 4000);
+};
+function stop() {
+  var player = document.getElementById('bday');
+  player.pause();
 };
 window.onload = webLoad();
