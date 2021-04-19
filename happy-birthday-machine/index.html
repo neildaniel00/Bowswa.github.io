@@ -125,8 +125,10 @@
         var color1S = localStorage.getItem('color1');
         var color2S = localStorage.getItem('color2');
         colorStatus = localStorage.getItem('colorStatus');
-        if (!color1 || !color2 && !color1S || !color2S) {
-          return alert('You must choose both colors!');
+        if (!color1 || !color2) {
+          if (!color1S || !color2S) {
+            return alert('You must choose both colors!');
+          }
         }else if (color1S && color2S) {
           savedColor = confirm('You are using previously saved colors. Do you still want to?');
           if (savedColor = true) {
