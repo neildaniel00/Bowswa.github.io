@@ -25,7 +25,7 @@ function resetName() {
   stop();
   var end = new Audio('media/windowsXPshutdown.mp3');
   end.play();
-  setTimeout(function() { location.replace('https://bowswa.github.io/happy-birthday-machine/index.html'); }, 4000);
+  setTimeout(function() { location.replace('https://bowswa.github.io/happy-birthday-machine/index.html'); }, 3000);
 };
 function stop() {
   audio = document.getElementById('bday');
