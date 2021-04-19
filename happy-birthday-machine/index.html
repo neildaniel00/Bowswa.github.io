@@ -115,7 +115,7 @@
         var colorStatus = false
         colorStatus = localStorage.getItem('colorStatus')
         if (colorStatus === false || !colorStatus) {
-          document.getElementsByClass('colorOptions').style.display = 'block';
+          document.getElementsByClassName('colorOptions').style.display = 'block';
           localStorage.setItem('colorStatus', true);
         }else if (colorStatus === true) {
           document.getElementsByClass('colorOptions').style.display = 'none';
