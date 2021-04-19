@@ -29,7 +29,19 @@ function resetName() {
 };
 function stop() {
   var player = document.getElementById('bday');
-  player.pause();
-  player.src = player.src;
+  toggle(1);
 };
+function toggle(state) {
+
+  var player = document.getElementById('bday');
+  var src = "http://192.81.248.91:8159/;";
+
+  switch(state) {
+    case 1:
+      player.pause();
+      player.currentTime = 0;
+      player.src = '';
+      break;
+  }
+}
 window.onload = webLoad();
