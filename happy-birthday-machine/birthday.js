@@ -25,6 +25,7 @@ function webLoad() {
 };
 function resetName() {
     localStorage.removeItem('BdayPerson');
+    stop();
     var end = new Audio('media/windowsXPshutdown.mp3');
     end.play();
     setTimeout(function() { location.replace('https://bowswa.github.io/happy-birthday-machine/index.html'); }, 4000);
