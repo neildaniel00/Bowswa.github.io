@@ -105,24 +105,11 @@
       <a href="../../apps.html">A N' G</a>
     </div>
     <input id="user" class="inputty" type="text" placeholder="BDay Person">
-    <input id="checkbox" onclick="toggleColors()" class="inputty" type="checkbox">
-    <input id="color1" class="colorOptions" type="color" style="display:none">
-    <input id="color2" class="colorOptions" type="color" style="display:none">
+    <input id="color1" class="colorOptions" type="color">
+    <input id="color2" class="colorOptions" type="color">
     <button type="button" class="box buttons" onclick="submit()">
       &gt;Submit data!&lt;</button>
     <script>
-      function toggleColors() {
-        var colorStatus = false
-        colorStatus = localStorage.getItem('colorStatus')
-        if (colorStatus === false || !colorStatus) {
-          document.getElementsByClassName('colorOptions').style.display = 'block';
-          localStorage.setItem('colorStatus', true);
-        }else if (colorStatus === true) {
-          document.getElementsByClass('colorOptions').style.display = 'none';
-          localStorage.setItem('colorStatus', false);
-
-        }
-      };
       function submit() {
         var name = document.getElementById('user').value;
         if (!name) {
@@ -135,18 +122,25 @@
 
         var color1 = document.getElementById('color1').value;
         var color2 = document.getElementById('color2').value;
+        var color1S = localStorage.getItem('color1');
+        var color2S = localStorage.getItem('color2');
         colorStatus = localStorage.getItem('colorStatus');
-        if (colorStatus === false) {
-          return location.reload();
-        }else if (colorStatus === true && !color1 || !color2) {
+        if (!color1 || !color2 && !color1S || !color2S) {
           return alert('You must choose both colors!');
-        }else if (colorStatus === true && color1 && color2) {
+        }else if (color1S && color2S) {
+          savedColor = confirm('You are using previously saved colors. Do you still want to?');
+          if (savedColor = true) {
+            return location.reload()
+          }else if (savedColor = false) {
+            return alert('You decided to set custom colors. Submit again if this was a mistake!');
+          }
+        }else if (color1 && color2) {
           localStorage.setItem('color1', color1);
           localStorage.setItem('color2', color2);
+          location.reload();
         }else {
           return alert('Unknown error. If this keeps happening please report on my discord!')
         }
-        location.reload();
       };
       if (!localStorage.getItem('BdayPerson')) {
       }else{
