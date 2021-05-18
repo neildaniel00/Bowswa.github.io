@@ -131,9 +131,9 @@
           }
         }else if (color1S && color2S) {
           savedColor = confirm('You are using previously saved colors. Do you still want to?');
-          if (savedColor = true) {
+          if (savedColor === true) {
             return location.reload()
-          }else if (savedColor = false) {
+          }else if (savedColor === false) {
             return alert('You decided to set custom colors. Submit again if this was a mistake!');
           }
         }else if (color1 && color2) {
