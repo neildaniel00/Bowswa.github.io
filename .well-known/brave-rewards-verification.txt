@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: bowswa.github.io
-Token: 07ea0c3227c11577dfc1d796208398e5ad7acdea0d2a21ae5be088bd4992997d
+Token: 0ab5950c3a537c61167de01a27d655b6fed136f394c6f367103d63ea819030f3
