@@ -292,8 +292,7 @@ function updateAll() {
   updateVersion();
 };
 function update5sec() {
-  pretzelBank = pretzelBank.toFixed(1);
-  document.title = pretzelBank + ' Pretzels';
+  document.title = pretzelBank.toFixed(1) + ' Pretzels';
   pretzelsPSCalc();
 };
 function updateNormal() {
