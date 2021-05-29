@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pretzel Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      let keysDown = {};
+      window.onkeydown = function (keyboardshortcuts) {
+        keysDown[keyboardshortcuts.key] = true;
+        if (keysDown['Control'] && keysDown['x']) {
+          console.log('Game Saved!');
+          save();
+        }else if (keysDown['Control'] && keysDown['v']) {
+          console.log('Game Loaded!');
+          load();
+        }
+      };
+      window.onkeyup = function (keyboardshortcuts) {
+        keysDown[keyboardshortcuts.key] = false;
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="toppane">
+        <p>
+          <span class="links">
+            <a href="https://bowswa.github.io" target="_blank">Bowswa</a> &
+            <a href="https://the-ramenator.github.io" target="_blank">The Ramenator</a>
+            |
+            <a href="https://discord.gg/RqSwaQTZn4" target="_blank">Game Discord</a>
+          </span>
+          <div class="dropdown">
+          <span class="other-versions">
+            <span class="dropbtn">Other Versions:</span>
+            <div class="dropdown-content">
+              <a href="../index.html" id="live">Live</a>
+              <a href="./index.html" id="beta">Beta</a>
+            </div>
+            </div>
+          </span>
+        </p>
+      </div>
+      <!--<div class="divs"></div>-->
+
+      <div class="leftpane">
+        <p id="prtzelBank">Pretzels: 0</p>
+        <input
+          type="image"
+          class="box"
+          id="pretzel"
+          onclick="pretzelClicked()"
+          alt="Pretzel"
+          src="img/Pretzel.png"
+        />
+        <p id="version">Version:</p>
+      </div>
+
+      <div class="middlepane">
+        <div id="middleButtons">
+          <button class="menu buttons" id="settings" onclick="midSectionSettings()">Settings</button>
+          <button class="menu buttons" id="stats" onclick="midSectionStats()">Stats</button>
+          <button class="menu buttons" id="changelog" onclick="midSectionUpdates()">Updates</button>
+          <!--<button class="menu" id="Acendance">Acend</button>-->
+        </div>
+        <div id="middleContent">
+        </div>
+      </div>
+
+      <div class="rightpane">
+        <p id="clicker_build">Clicker Buildings! <span id="clicker_build_amount">0 Owned</span></p>
+        <p id="clicker">Clickers! <span id="clicker_amount">0 Owned</span></p>
+        <p id="clicker_disc">Autoclicks the Pretzel every 10 seconds.</p>
+        <p id="clicker_price">Cost: <span id="cli_price">15 Pretzels</span></p>
+        <button class="buy buttons" onclick="buyClicker()">Buy</button>
+        &NonBreakingSpace;
+        <button class="sell buttons" onclick="sellClicker()">Sell</button>
+        &NonBreakingSpace;
+        <button class="upgrade disabled_buttons" onclick="upgradeClicker()">Upgrade</button>
+        <br>
+        <p id="slappers">Slappers! <span id="slapper_amount">0 Owned</span></p>
+        <p id="slapper_disc">An upgraded Clicker autoslaps the pretzel every 5 seconds.</p>
+        <p id="slapper_price">Cost: 2 UT</p>
+        <button class="upgrade disabled_buttons" onclick="upgradeSlapper()">Upgrade</button>
+        &NonBreakingSpace;
+        <button class="downgrade disabled_buttons" onclick="downgradeSlapper()">Downgrade</button>
+        
+        <br>
+        <p id="grandma_build">Grandma Buildings! <span id="grandma_build_amount">0 Owned</span></p>
+        <p id="grandma_bakers">Grandma Baker! <span id="grandma_baker_amount">0 Owned</span></p>
+        <p id="grandma_baker_disc">Bakes a pretzel every single second.</p>
+        <p id="grandma_baker_price">Cost: <span id="gm_bake_price">100 Pretzels</span></p>
+        <button class="buy buttons" onclick="buyGrandma()">Buy</button>
+        &NonBreakingSpace;
+        <button class="sell buttons" onclick="sellGrandma()">Sell</button>
+        &NonBreakingSpace;
+        <button class="upgrade disabled_buttons" onclick="upgradeGmBaker()">Upgrade</button>
+        <br>
+        <p id="grandma_twisters">Grandma Twisters! <span id="grandma_twister_amount">0 Owned</span></p>
+        <p id="grandma_twister_disc">An upgraded Grandma that twists pretzels slightly faster.</p>
+        <p id="grandma_twister_price">Cost: 5 UT</p>
+        <button class="upgrade disabled_buttons" onclick="upgradeGmTwister()">Upgrade</button>
+        &NonBreakingSpace;
+        <button class="downgrade disabled_buttons" onclick="downgradeGmTwister()">Downgrade</button>
+
+        <br>
+        <p id="grandpa_bakers">Grandpa Baker! <span id="grandpa_baker_amount">0 Owned</span></p>
+        <p id="grandpa_baker_disc" title="SIMP Addiction SB: Earn an extra 2 Pretzels per Grandpa for every 25 Grandmas!">Bakes 5 Pretzels every second. Suffers from SIMP Addiction.</p>
+        <p id="grandpa_baker_price">Cost: <span id="gp_bake_price">500 Pretzels</span></p>
+        <button class="buy buttons" onclick="buyGrandpa()">Buy</button>
+        &NonBreakingSpace;
+        <button class="sell buttons" onclick="sellGrandpa()">Sell</button>
+        &NonBreakingSpace;
+        <button class="upgrade disabled_buttons" onclick="upgradeGpBaker()">Upgrade</button>
+        <br>
+        <p id="grandpa_twisters">Grandpa Twisters! <span id="grandpa_twister_amount">0 Owned</span></p>
+        <p id="grandpa_twister_disc">An upgraded Grandpa that twists pretzels slightly faster.</p>
+        <p id="grandpa_twister_price">Cost: 10 UT</p>
+        <button class="upgrade disabled_buttons" onclick="upgradeGpTwister()">Upgrade</button>
+        &NonBreakingSpace;
+        <button class="downgrade disabled_buttons" onclick="downgradeGpTwister()">Downgrade</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
