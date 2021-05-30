@@ -1,35 +1,824 @@
-
 <!DOCTYPE html>
 <!--Made mostly by neildaniel00-->
 <html>
-  <head>
-    <title>Happy Birthday @name! From Bowswa!</title>
-    <link rel="shortcut icon" href="media/Birthday_Caik.png">
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://lh3.googleusercontent.com/l1u9P0J-mImEiNi2ZcLA8OhieSbTWueuC1n1e9y9YPaea-OLG0IXXnKAHMz6EEAV1HxOF3oVpOQOFKuqJT0adlmeZIbPL9AAiFTl0FItnssVXfWXFIWSwl4IUsgOZQmC3_pw_FBICbAwyygSL2NnMwcB8vIw8bthN5fnvW9AXWnlbbU00QX5PMwKVUqIITuL7TqJeRB_FdslpYcPjspFKU-fiewft4SWYH1bIPHCJVd5tx3gMiS7XgZDjVyTYsanFEGl3fm9YdsFgwLk1XP3Uiu4uEFs1atLJO4FEZu5tk1VEH0nXcgvJ1n8wFN3DIPP3VKFwqnCXM3XtAKERzACwoq1ujdV5nHkBoPn7sHJn-OnzX3WeURe7k6562S0TjUWMo7ZPmWf0t1e7YkBYpTwKDpD8NrCs3Z21KynFJEoLwqFSQPnPcASk-7VwmpoTSUpKCKA-E-xqlsJ6q0ovyrorzpIpQTdy84QkibTVRJ0Yq1N-DkwEAWsBVzZsx3CNjujzZ400VOa0xq5iPck_GTJPK7GHsQmkCI_9G52TtprLDB0kborOBNZhA4bhQkf-yy5DqZSw8iaHRxgu3ACxv1oisSGtSecwrnqOd_4azsIVtqpLlpioFcfJLxiU5mfjzt2XEBExGQezHO80a15r1uaXk6BM-ifxFRzcHlUe0pnC_JZ4ldJhL-6w6EimxNID0hXKNs1Pojtu7fDiAvnvhv1yp_9=w593-h421-no?authuser=0"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 
-    <style id="kf">
-      @keyframes bounce {
-        0% {
-          color: darkblue;
-        }
-        100% {
-          color: lime;
-          top: -20px;
-          text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-            0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-            0 50px 25px rgba(0, 0, 0, 0.2);
-        }
+<head>
+  <title>Happy Birthday @name! From Bowswa!</title>
+  <link rel="shortcut icon" href="media/Birthday_Caik.png">
+  <link rel="icon" type="image/png" href="media/Birthday_Caik.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <style id="animation-container">
+    @keyframes bounce {
+      0% {
+        color: #fff;
       }
-    </style>
-    <style>
-      body {
-        background-color: #333;
+
+      100% {
+        top: -20px;
+        color: #000;
+        text-shadow: 0 1px 0 #ccc,
+          0 2px 0 #ccc,
+          0 3px 0 #ccc,
+          0 4px 0 #ccc,
+          0 5px 0 #ccc,
+          0 6px 0 #ccc,
+          0 7px 0 #ccc,
+          0 8px 0 #ccc,
+          0 9px 0 #ccc,
+          0 50px 25px rgba(0, 0, 0, 0.2);
+      }
+    }
+  </style>
+  <style id="cake-style">
+    body {
+      background: rgb(105, 105, 105);
+      background: radial-gradient(circle, rgba(105, 105, 105, 1) 0%, rgba(51, 51, 51, 1) 100%);
+
+    }
+
+    .cake {
+      position: absolute;
+      width: 250px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      margin-top: -70px;
+      margin-left: -125px;
+    }
+
+    .plate {
+      width: 270px;
+      height: 110px;
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3,
+        0 5px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .cake>* {
+      position: absolute;
+    }
+
+    .layer {
+      position: absolute;
+      display: block;
+      width: 250px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #553c13;
+      box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b,
+        0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b,
+        0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a,
+        0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09,
+        0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+    }
+
+    .layer-top {
+      top: 0px;
+    }
+
+    .layer-middle {
+      top: 33px;
+    }
+
+    .layer-bottom {
+      top: 66px;
+    }
+
+    .icing {
+      top: 2px;
+      left: 5px;
+      background-color: #f0e4d0;
+      width: 240px;
+      height: 90px;
+      border-radius: 50%;
+    }
+
+    .icing:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      bottom: 6px;
+      left: 5px;
+      background-color: #f4ebdc;
+      box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .drip {
+      display: block;
+      width: 50px;
+      height: 60px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      background-color: #f0e4d0;
+    }
+
+    .drip1 {
+      top: 53px;
+      left: 5px;
+      transform: skewY(15deg);
+      height: 48px;
+      width: 40px;
+    }
+
+    .drip2 {
+      top: 69px;
+      left: 181px;
+      transform: skewY(-15deg);
+    }
+
+    .drip3 {
+      top: 54px;
+      left: 90px;
+      width: 80px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .candle {
+      background-color: #7b020b;
+      width: 16px;
+      height: 50px;
+      border-radius: 8px/4px;
+      top: -20px;
+      left: 50%;
+      margin-left: -8px;
+      z-index: 10;
+    }
+
+    .candle:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ad030f;
+    }
+
+    .flame {
+      position: absolute;
+      background-color: orange;
+      width: 15px;
+      height: 35px;
+      border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+      top: -34px;
+      left: 50%;
+      margin-left: -7.5px;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+        0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+        0 0 80px rgba(255, 165, 0, 0.5);
+      transform-origin: 50% 90%;
+      animation: flicker 1s ease-in-out alternate infinite;
+    }
+
+
+
+
+    @keyframes flicker {
+      0% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.2),
+          0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2),
+          0 0 80px rgba(255, 165, 0, 0.2);
+      }
+
+      25% {
+        transform: skewX(-5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+          0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+          0 0 80px rgba(255, 165, 0, 0.5);
+      }
+
+      50% {
+        transform: skewX(10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.3),
+          0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3),
+          0 0 80px rgba(255, 165, 0, 0.3);
+      }
+
+      75% {
+        transform: skewX(-10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4),
+          0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4),
+          0 0 80px rgba(255, 165, 0, 0.4);
+      }
+
+      100% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+          0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+          0 0 80px rgba(255, 165, 0, 0.5);
+      }
+    }
+  </style>
+  <style id="other-styles">
+    body {
+      font-family: "Oxygen";
+    }
+
+    h1 {
+      height: 100px;
+      font-family: 'Oxygen', sans-serif;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 100%;
+    }
+  </style>
+  <style id="bouncing-letters">
+    h1 span {
+      position: relative;
+      top: 20px;
+      display: inline-block;
+      animation: bounce 0.3s ease infinite alternate;
+      color: #fff;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
+        0 8px 0 transparent, 0 9px 0 transparent,
+        0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    h1 span:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+
+    h1 span:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    h1 span:nth-child(11) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(12) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(13) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(14) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(16) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(17) {
+      animation-delay: 0.7s;
+    }
+  </style>
+  <style>
+    button {
+      border: none;
+      background-color: inherit;
+    }
+
+    button {
+      padding: 0.75em 2em;
+      text-align: center;
+      text-decoration: none;
+      color: #2194e0;
+      border: 2px solid #2194e0;
+      font-size: 24px;
+      display: inline-block;
+      border-radius: 0.3em;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:before {
+      content: '';
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      width: 3em;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -4.5em;
+      transform: skewX(-45deg) translateX(0);
+      transition: none;
+    }
+
+    button:hover {
+      background-color: #2194e0;
+      color: #fff;
+      border-bottom: 4px solid #1977b5;
+    }
+
+    button:hover:before {
+      transform: skewX(-45deg) translateX(13.5em);
+      transition: all 0.5s ease-in-out;
+    }
+
+    button:active {
+      transform: translateY(2px);
+      background-color: #2194e0;
+      color: #fff;
+      border-bottom: 4px solid #1977b5;
+    }
+
+    @-webkit-keyframes sheen {
+      0% {
+        transform: skewY(-45deg) translateX(0);
+      }
+
+      100% {
+        transform: skewY(-45deg) translateX(12.5em);
+      }
+    }
+
+    @keyframes sheen {
+      0% {
+        transform: skewY(-45deg) translateX(0);
+      }
+
+      100% {
+        transform: skewY(-45deg) translateX(12.5em);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1 class="bouncy-letters" style="font-size: 4vw">
+      <span>H</span>
+      <span>A</span>
+      <span>P</span>
+      <span>P</span>
+      <span>Y</span>
+      <span>&nbsp;</span>
+      <span>B</span>
+      <span>I</span>
+      <span>R</span>
+      <span>T</span>
+      <span>H</span>
+      <span>D</span>
+      <span>A</span>
+      <span>Y</span>
+      <span>&nbsp;</span>
+      <span id="BDayName">@NAME</span>
+      <span>!</span>
+    </h1>
+  </center>
+  <audio autoplay loop id="bday">
+    <source src="media/Happy_Birthday.mp3" type="audio/mp3; codecs=opus">
+    <source src="media/Happy_Birthday.mp3" type="audio/mp3">
+    <span>Your browser does not support the <code>audio</code> element.</span>
+  </audio>
+  <div id="cake-html">
+    <div class="cake">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+  </div>
+  <center>
+    <button type="button" class="buttons" onclick="resetName()">
+      Reset
+      Name</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="buttons" id="bounce_changer" onclick="removeBounce()">
+      Remove Bounce</button>
+
+  </center>
+  <script>
+    function webLoad() {
+      /*Declare Variables*/
+      var bDayName;
+      var bDayName_default = "Name Here";
+      var color1;
+      var color1_default = "#FF0000";
+      var color2;
+      var color2_default = "#0000FF";
+      var cake_default = "1";
+      var cake = localStorage.getItem('cake');
+      /*Local Storage*/
+      bDayName = localStorage.getItem('BdayPerson');
+      color1 = localStorage.getItem('color1');
+      color2 = localStorage.getItem('color2');
+
+      if (!localStorage.getItem('BdayPerson')) {
+        localStorage.setItem('BdayPerson', bDayName_default);
+        bDayName = bDayName_default;
+      }
+      else if (!localStorage.getItem('color1')) {
+        localStorage.setItem('color1', color1_default);
+        color1 = color1_default;
+      }
+      else if (!localStorage.getItem('color2')) {
+        localStorage.setItem('color2', color2_default);
+        color2 = color2_default;
+      }
+      else if (!localStorage.getItem('cake')) {
+        localStorage.setItem('cake', cake_default);
+        cake = cake_default;
+      }
+      else {
+        console.log('Everything is working, or some other error occured!')
+      }
+      document.title = 'Happy Birthday ' + bDayName + '!';
+      /*Change Style tag innerHTML*/
+      document.getElementById('animation-container').innerHTML = `
+
+      @keyframes bounce {
+    0% {
+      color: ${color1};
+    }
+    100% {
+      color: ${color2};
+      top: -20px;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+  }`
+      /*InnerHTML changes*/
+      document.getElementById('BDayName').innerHTML = bDayName;
+      /*Cake Changes*/
+      if (cake === "1") {
+        console.log('Default Cake Already Set!')
+      }
+      else if (cake === "2") {
+        document.getElementById('cake-style').innerHTML = `
+    body {
+      background: #1D8348;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      position: relative;
+      left: 48%;
+    }
+
+    .bdaycake {
+      top: 200px;
+      position: relative;
+    }
+
+    .holder {
+      position: absolute;
+      width: 350px;
+      height: 20px;
+      border-radius: 100px;
+      background-color: #212F3C;
+      left: -140px;
+      z-index: 11;
+      top: 10px;
+    }
+
+    .holder2 {
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      background-color: #CACFD2;
+      left: -22px;
+    }
+
+    .holder:before {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 20px;
+      border-radius: 100px;
+      background-color: #CACFD2;
+      top: 139px;
+      left: 77px;
+    }
+
+    .shadow {
+      position: absolute;
+      width: 400px;
+      height: 40px;
+      border-radius: 50%;
+      top: 150px;
+      left: -155px;
+      background-color: rgba(0, 0, 0, 0.095);
+      z-index: -1;
+    }
+
+    .holder1 {
+      position: absolute;
+      background-color: #1D8348;
+      width: 100px;
+      height: 119px;
+      border-radius: 0 30px 0 0;
+      left: -77px;
+      top: 30px;
+      z-index: 10;
+    }
+
+    .holder1:after {
+      position: absolute;
+      content: "";
+      background-color: #1D8348;
+      width: 100px;
+      height: 120px;
+      border-radius: 30px 0 0 0;
+      left: 130px;
+    }
+
+    .cake {
+      position: absolute;
+      overflow: hidden;
+      width: 280px;
+      height: 140px;
+      background-color: #FAD7A0;
+      top: -130px;
+      left: -102px;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .cake:after {
+      content: "";
+      background-color: #935116;
+      width: 280px;
+      height: 15px;
+      position: absolute;
+      top: 105px;
+    }
+
+    .cake:before {
+      content: "";
+      background-color: #935116;
+      width: 280px;
+      height: 15px;
+      position: absolute;
+      top: 75px;
+    }
+
+    .top {
+      position: absolute;
+      background-color: #573612;
+      width: 290px;
+      height: 40px;
+      box-shadow: inset -10px 10px 0 rgba(0, 0, 0, 0.07);
+    }
+
+    .top:after {
+      content: "";
+      position: absolute;
+      background-color: #573612;
+      width: 25px;
+      height: 55px;
+      top: 15px;
+      border-radius: 50px;
+    }
+
+    .top:before {
+      content: "";
+      position: absolute;
+      background-color: #FAD7A0;
+      width: 25px;
+      height: 35px;
+      top: 25px;
+      left: 25px;
+      border-radius: 50px;
+    }
+
+    .chocolate {
+      position: absolute;
+      background-color: #573612;
+      width: 25px;
+      height: 45px;
+      top: 15px;
+      left: 50px;
+      border-radius: 50px;
+    }
+
+    .chocolate:after {
+      content: "";
+      position: absolute;
+      background-color: #FAD7A0;
+      width: 25px;
+      height: 35px;
+      left: 25px;
+      border-radius: 50px;
+    }
+
+    .chocolate:before {
+      position: absolute;
+      background-color: #573612;
+      width: 25px;
+      height: 45px;
+      top: 10px;
+      left: 50px;
+      border-radius: 50px;
+      content: "";
+    }
+
+    .chocolate1 {
+      position: absolute;
+      background-color: #FAD7A0;
+      width: 25px;
+      height: 35px;
+      left: 125px;
+      top: 25px;
+      border-radius: 50px;
+    }
+
+    .chocolate1:after {
+      position: absolute;
+      background-color: #573612;
+      width: 25px;
+      height: 45px;
+      top: -5px;
+      left: 25px;
+      border-radius: 50px;
+      content: "";
+    }
+
+    .chocolate1:before {
+      position: absolute;
+      content: "";
+      background-color: #FAD7A0;
+      width: 25px;
+      height: 35px;
+      left: 50px;
+      top: 5px;
+      border-radius: 50px;
+    }
+
+    .chocolate2 {
+      position: absolute;
+      background-color: #573612;
+      width: 25px;
+      height: 35px;
+      left: 200px;
+      top: 17px;
+      border-radius: 50px;
+    }
+
+    .chocolate2:after {
+      position: absolute;
+      content: "";
+      background-color: #FAD7A0;
+      border-radius: 50px;
+      width: 25px;
+      height: 35px;
+      left: 25px;
+    }
+
+    .chocolate2:before {
+      content: "";
+      position: absolute;
+      background-color: #573612;
+      width: 35px;
+      height: 35px;
+      left: 50px;
+      top: 8px;
+      border-radius: 50px;
+    }
+
+    .candle {
+      position: absolute;
+      width: 15px;
+      height: 70px;
+      background-color: white;
+      top: -200px;
+      left: 30px;
+      box-shadow: inset 0 -10px 0 #E74C3C;
+    }
+
+    .candle:after {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #E74C3C;
+      content: "";
+      top: 35px;
+    }
+
+    .candle:before {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #E74C3C;
+      content: "";
+      top: 10px;
+    }
+
+    .candle1 {
+      width: 2px;
+      height: 15px;
+      content: "";
+      position: absolute;
+      background-color: black;
+      top: -215px;
+      left: 36px;
+    }
+
+    .flame {
+      position: absolute;
+      background-color: #F4D03F;
+      opacity: 0.9;
+      z-layer: 1000;
+      box-shadow: inset 0 -5px 5px #D35400, 5px -5px 20px #FBFFA3;
+      width: 20px;
+      height: 30px;
+      top: -240px;
+      border-radius: 50%;
+      left: 27.5px;
+      animation: flame 0.5s infinite;
+    }
+
+    @keyframes flame {
+
+      from,
+      to {
+        transform: scale(1, 1);
+      }
+
+      25% {
+        transform: scale(0.9, 1.1);
+      }
+
+      50% {
+        transform: scale(1.1, 0.9);
+      }
+
+      75% {
+        transform: scale(0.95, 1.05);
+      }
+    }
+                `
+        document.getElementById('cake-html').innerHTML = `
+  <div class="container">
+    <div class="bdaycake">
+      <div class="holder"></div>
+      <div class="holder2"></div>
+      <div class="holder1"></div>
+      <div class="shadow"></div>
+      <div class="cake">
+        <div class="top"></div>
+        <div class="chocolate"></div>
+        <div class="chocolate1"></div>
+        <div class="chocolate2"></div>
+      </div>
+      <div class="candle"></div>
+      <div class="candle1"></div>
+      <div class="flame"></div>
+    </div>
+  </div>
+`
+          ;
+      }
+      else if (cake === "3") {
+        document.getElementById('cake-style').innerHTML = `
+                body {
+        background: rgb(249, 236, 233);
+        background: radial-gradient(
+          circle,
+          rgba(249, 236, 233, 1) 1%,
+          rgba(221, 184, 184, 1) 100%
+        );
       }
 
       .cake {
@@ -64,12 +853,12 @@
         width: 250px;
         height: 100px;
         border-radius: 50%;
-        background-color: #553c13;
-        box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b,
-          0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b,
-          0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a,
-          0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09,
-          0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+        background-color: #ff99a3;
+        box-shadow: 0 2px 0px #ffc4ca, 0 4px 0px #ffc4ca, 0 6px 0px #ffc4ca,
+          0 8px 0px #ffc4ca, 0 10px 0px #ffc4ca, 0 12px 0px #ffc4ca,
+          0 14px 0px #ffc4ca, 0 16px 0px #ffc4ca, 0 18px 0px #ffc4ca,
+          0 20px 0px #ffc4ca, 0 22px 0px #ffc4ca, 0 24px 0px #ffc4ca,
+          0 26px 0px #ffc4ca, 0 28px 0px #ffc4ca, 0 30px 0px #ffc4ca;
       }
 
       .layer-top {
@@ -87,7 +876,7 @@
       .icing {
         top: 2px;
         left: 5px;
-        background-color: #f0e4d0;
+        background-color: #F8DBDB;
         width: 240px;
         height: 90px;
         border-radius: 50%;
@@ -99,8 +888,8 @@
         right: 5px;
         bottom: 6px;
         left: 5px;
-        background-color: #f4ebdc;
-        box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
+        background-color: #F8DBDB;
+        box-shadow: 0 0 4px #FFB9B9, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
         border-radius: 50%;
         z-index: 1;
       }
@@ -111,7 +900,204 @@
         height: 60px;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
-        background-color: #f0e4d0;
+        background-color: #FFCECE;
+      }
+
+      .drip1 {
+        top: 53px;
+        left: 5px;
+        transform: skewY(15deg);
+        height: 48px;
+        width: 40px;
+      }
+
+      .drip2 {
+        top: 69px;
+        left: 181px;
+        transform: skewY(-15deg);
+      }
+
+      .drip3 {
+        top: 54px;
+        left: 90px;
+        width: 80px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      .candle {
+        background-color: #ccc;
+        width: 16px;
+        height: 50px;
+        border-radius: 8px/4px;
+        top: -20px;
+        left: 50%;
+        margin-left: -8px;
+        z-index: 10;
+      }
+      .candle:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #AFAEAE;
+      }
+
+      .flame {
+        position: absolute;
+        background-color: orange;
+        width: 15px;
+        height: 35px;
+        border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+        top: -34px;
+        left: 50%;
+        margin-left: -7.5px;
+        z-index: 10;
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+          0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+          0 0 80px rgba(255, 165, 0, 0.5);
+        transform-origin: 50% 90%;
+        animation: flicker 1s ease-in-out alternate infinite;
+      }
+
+      @keyframes flicker {
+        0% {
+          transform: skewX(5deg);
+          box-shadow: 0 0 10px rgba(255, 165, 0, 0.2),
+            0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2),
+            0 0 80px rgba(255, 165, 0, 0.2);
+        }
+        25% {
+          transform: skewX(-5deg);
+          box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+            0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+            0 0 80px rgba(255, 165, 0, 0.5);
+        }
+        50% {
+          transform: skewX(10deg);
+          box-shadow: 0 0 10px rgba(255, 165, 0, 0.3),
+            0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3),
+            0 0 80px rgba(255, 165, 0, 0.3);
+        }
+        75% {
+          transform: skewX(-10deg);
+          box-shadow: 0 0 10px rgba(255, 165, 0, 0.4),
+            0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4),
+            0 0 80px rgba(255, 165, 0, 0.4);
+        }
+        100% {
+          transform: skewX(5deg);
+          box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+            0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
+            0 0 80px rgba(255, 165, 0, 0.5);
+        }
+      }`;
+        document.getElementById('cake-html').innerHTML = `
+                <div class="cake">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>`;
+      }
+      else if (cake === "4") {
+        document.getElementById('cake-style').innerHTML = `
+                body {
+                    background: rgb(255,255,189);
+background: radial-gradient(circle, rgba(255,255,189,1) 8%, rgba(248,255,116,1) 100%);
+
+      }
+
+      .cake {
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        margin-top: -70px;
+        margin-left: -125px;
+      }
+
+      .plate {
+        width: 270px;
+        height: 110px;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3,
+          0 5px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .cake > * {
+        position: absolute;
+      }
+
+      .layer {
+        position: absolute;
+        display: block;
+        width: 250px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #f3f0cb;
+        box-shadow: 0 2px 0px #ecce8c, 0 4px 0px #ecce8c, 0 6px 0px #ecce8c,
+          0 8px 0px #ecce8c, 0 10px 0px #ecce8c, 0 12px 0px #ecce8c,
+          0 14px 0px #ecce8c, 0 16px 0px #ecce8c, 0 18px 0px #ecce8c,
+          0 20px 0px #ecce8c, 0 22px 0px #ecce8c, 0 24px 0px #ecce8c,
+          0 26px 0px #ecce8c, 0 28px 0px #ecce8c, 0 30px 0px #ecce8c;
+      }
+
+      .layer-top {
+        top: 0px;
+      }
+
+      .layer-middle {
+        top: 33px;
+      }
+
+      .layer-bottom {
+        top: 66px;
+      }
+
+      .icing {
+        top: 2px;
+        left: 5px;
+        background-color: #f3f0cb;
+        width: 240px;
+        height: 90px;
+        border-radius: 50%;
+      }
+      .icing:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        bottom: 6px;
+        left: 5px;
+        background-color: #f7f6e7;
+        box-shadow: 0 0 4px #f3f0cb, 0 0 4px #f3f0cb, 0 0 4px #f3f0cb;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .drip {
+        display: block;
+        width: 50px;
+        height: 60px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: #f3f0cb;
       }
 
       .drip1 {
@@ -174,68 +1160,6 @@
         animation: flicker 1s ease-in-out alternate infinite;
       }
 
-      @-webkit-keyframes sheen {
-        0% {
-          transform: skewY(-45deg) translateX(0);
-        }
-        100% {
-          transform: skewY(-45deg) translateX(12.5em);
-        }
-      }
-      @keyframes sheen {
-        0% {
-          transform: skewY(-45deg) translateX(0);
-        }
-        100% {
-          transform: skewY(-45deg) translateX(12.5em);
-        }
-      }
-
-      button{
-        border: none;
-        background-color: inherit;
-      }
-      button {
-        padding: 0.75em 2em;
-        text-align: center;
-        text-decoration: none;
-        color: #2194e0;
-        border: 2px solid #2194e0;
-        font-size: 24px;
-        display: inline-block;
-        border-radius: 0.3em;
-        transition: all 0.2s ease-in-out;
-        position: relative;
-        overflow: hidden;
-      }
-      button:before {
-        content: '';
-        background-color: rgba(255, 255, 255, 0.5);
-        height: 100%;
-        width: 3em;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: -4.5em;
-        transform: skewX(-45deg) translateX(0);
-        transition: none;
-      }
-      button:hover {
-        background-color: #2194e0;
-        color: #fff;
-        border-bottom: 4px solid #1977b5;
-      }
-      button:hover:before {
-        transform: skewX(-45deg) translateX(13.5em);
-        transition: all 0.5s ease-in-out;
-      }
-      button:active {
-        transform: translateY(2px);
-        background-color: #2194e0;
-        color: #fff;
-        border-bottom: 4px solid #1977b5;
-      }
-
       @keyframes flicker {
         0% {
           transform: skewX(5deg);
@@ -267,101 +1191,9 @@
             0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5),
             0 0 80px rgba(255, 165, 0, 0.5);
         }
-      }
-      h1 {
-        height: 100px;
-        font-family: 'Oxygen', sans-serif;
-      }
-      .buttons {
-        top: 100%;
-        position: absolute;
-      }
-
-      h1 span {
-        position: relative;
-        top: 20px;
-        display: inline-block;
-        animation: bounce 0.3s ease infinite alternate;
-        color: #fff;
-        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-          0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
-          0 8px 0 transparent, 0 9px 0 transparent,
-          0 10px 10px rgba(0, 0, 0, 0.4);
-      }
-
-      h1 span:nth-child(2) {
-        animation-delay: 0.1s;
-      }
-      h1 span:nth-child(3) {
-        animation-delay: 0.2s;
-      }
-      h1 span:nth-child(4) {
-        animation-delay: 0.3s;
-      }
-      h1 span:nth-child(5) {
-        animation-delay: 0.4s;
-      }
-      h1 span:nth-child(7) {
-        animation-delay: 0.6s;
-      }
-      h1 span:nth-child(8) {
-        animation-delay: 0.7s;
-      }
-      h1 span:nth-child(9) {
-        animation-delay: 0.8s;
-      }
-      h1 span:nth-child(10) {
-        animation-delay: 0.9s;
-      }
-      h1 span:nth-child(11) {
-        animation-delay: 0.1s;
-      }
-      h1 span:nth-child(12) {
-        animation-delay: 0.2s;
-      }
-      h1 span:nth-child(13) {
-        animation-delay: 0.3s;
-      }
-      h1 span:nth-child(14) {
-        animation-delay: 0.4s;
-      }
-      h1 span:nth-child(16) {
-        animation-delay: 0.6s;
-      }
-      h1 span:nth-child(17) {
-        animation-delay: 0.7s;
-      }
-    </style>
-  </head>
-
-  <body>
-    <center>
-      <h1 style="font-size: 4vw">
-        <span>H</span>
-        <span>A</span>
-        <span>P</span>
-        <span>P</span>
-        <span>Y</span>
-        <span>&nbsp;</span>
-        <span>B</span>
-        <span>I</span>
-        <span>R</span>
-        <span>T</span>
-        <span>H</span>
-        <span>D</span>
-        <span>A</span>
-        <span>Y</span>
-        <span>&nbsp;</span>
-        <span id="BDayName">@NAME</span>
-        <span>!</span>
-      </h1>
-    </center>
-<audio autoplay loop id="bday">
-    <source src="media/Happy_Birthday.mp3" type="audio/mp3; codecs=opus">
-    <source src="media/Happy_Birthday.mp3" type="audio/mp3">
-    <span>Your browser does not support the <code>audio</code> element.</span>
-  </audio>
-    <div class="cake">
+      }`;
+        document.getElementById('cake-html').innerHTML = `
+                <div class="cake">
       <div class="plate"></div>
       <div class="layer layer-bottom"></div>
       <div class="layer layer-middle"></div>
@@ -373,11 +1205,233 @@
       <div class="candle">
         <div class="flame"></div>
       </div>
-    </div>
-    <center>
-      <button type="button" class="buttons" onclick="resetName()">
-        &gt;reset name&lt;</button>
-    </center>
-    <script src="birthday.js"></script>
-  </body>
+    </div>`;
+      }
+
+    };
+    function removeBounce() {
+      /*Declare Variables*/
+      var bDayName;
+      var bDayName_default = "Name Here";
+      var color1;
+      var color1_default = "#FF0000";
+      var color2;
+      var color2_default = "#0000FF"
+      /*Local Storage*/
+      bDayName = localStorage.getItem('BdayPerson');
+      color1 = localStorage.getItem('color1');
+      color2 = localStorage.getItem('color2');
+
+      if (!localStorage.getItem('BdayPerson')) {
+        localStorage.setItem('BdayPerson', bDayName_default);
+        bDayName = bDayName_default;
+      }
+      else if (!localStorage.getItem('color1')) {
+        localStorage.setItem('color1', color1_default);
+        color1 = color1_default;
+      }
+      else if (!localStorage.getItem('color2')) {
+        localStorage.setItem('color2', color2_default);
+        color2 = color2_default;
+      }
+      else {
+        console.log('Everything is working, or some other error occured!')
+      }
+      if (document.getElementById('animation-container').innerHTML === `
+@keyframes bounce {
+0% {
+color: ${color1};
+}
+70%{
+  color: ${color2};
+}
+100% {
+color: ${color1};
+}
+}`) { 
+  document.getElementById('animation-container').innerHTML = `
+@keyframes bounce {
+0% {
+color: ${color1};
+}
+100% {
+color: ${color2};
+top: -20px;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+0 50px 25px rgba(0, 0, 0, 0.2);
+}
+}`;
+document.getElementById('bounce_changer').innerHTML = "Remove Bounce";
+document.getElementById('bouncing-letters').innerHTML = `
+h1 span {
+      position: relative;
+      top: 20px;
+      display: inline-block;
+      animation: bounce 0.3s ease infinite alternate;
+      color: #fff;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
+        0 8px 0 transparent, 0 9px 0 transparent,
+        0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    h1 span:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+
+    h1 span:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    h1 span:nth-child(11) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(12) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(13) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(14) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(16) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(17) {
+      animation-delay: 0.7s;
+    }
+`;
+}
+      else {
+        document.getElementById('animation-container').innerHTML = `
+@keyframes bounce {
+0% {
+color: ${color1};
+}
+70%{
+  color: ${color2};
+}
+100% {
+color: ${color1};
+}
+}`;
+document.getElementById('bounce_changer').innerHTML = "Add Bounce";
+
+        document.getElementById('bouncing-letters').innerHTML = `
+h1 span {
+      position: relative;
+      top: 20px;
+      display: inline-block;
+      animation: bounce 1.5s ease infinite alternate;
+      color: #fff;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
+        0 8px 0 transparent, 0 9px 0 transparent,
+        0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    h1 span:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+
+    h1 span:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    h1 span:nth-child(11) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(12) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(13) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(14) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(16) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(17) {
+      animation-delay: 0.7s;
+    }
+`;
+      }
+    };
+    function resetName() {
+      localStorage.removeItem('BdayPerson');
+      stop();
+      var end = new Audio('media/windowsXPshutdown.mp3');
+      end.play();
+      setTimeout(function () { location.replace('index.html'); }, 3000);
+    };
+    function stop() {
+      audio = document.getElementById('bday');
+      audio.pause();
+    };
+    window.onload = webLoad();
+  </script>
+</body>
+
 </html>
