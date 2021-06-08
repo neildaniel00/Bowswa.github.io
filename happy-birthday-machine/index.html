@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!--CSS, custom colors, cakes, and other bug fixes by The Ramenator-->
+<!-- Massive amounts of JS, fonts, custom colors idea and framework, and cake idea by Bowswa -->
 
 <head>
     <title>Bowswa's Happy BDay Machine</title>
@@ -10,14 +12,14 @@
         html {
             height: 100%;
         }
-
+        
         body {
             margin: 0;
             padding: 0;
             font-family: sans-serif;
             background: linear-gradient(#141e30, #243b55);
         }
-
+        
         .login-box {
             position: absolute;
             top: 50%;
@@ -30,18 +32,18 @@
             box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
             border-radius: 10px;
         }
-
+        
         .login-box h2 {
             margin: 0 0 30px;
             padding: 0;
             color: #fff;
             text-align: center;
         }
-
+        
         .login-box .user-box {
             position: relative;
         }
-
+        
         .login-box .user-box input {
             width: 100%;
             padding: 10px 0;
@@ -53,7 +55,7 @@
             outline: none;
             background: transparent;
         }
-
+        
         .login-box .user-box label {
             position: absolute;
             top: 0;
@@ -64,7 +66,7 @@
             pointer-events: none;
             transition: .5s;
         }
-
+        
         .login-box .user-box input:focus~label,
         .login-box .user-box input:valid~label {
             top: -20px;
@@ -72,7 +74,7 @@
             color: #03e9f4;
             font-size: 12px;
         }
-
+        
         .login-box form a {
             position: relative;
             display: inline-block;
@@ -86,22 +88,19 @@
             margin-top: 40px;
             letter-spacing: 4px
         }
-
+        
         .login-box a:hover {
             background: #03e9f4;
             color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
         }
-
+        
         .login-box a span {
             position: absolute;
             display: block;
         }
-
+        
         .login-box a span:nth-child(1) {
             top: 0;
             left: -100%;
@@ -110,9 +109,7 @@
             background: linear-gradient(90deg, transparent, #03e9f4);
             animation: btn-anim1 1s linear infinite;
         }
-
-
-
+        
         .login-box2 {
             position: absolute;
             top: 50%;
@@ -125,18 +122,18 @@
             box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
             border-radius: 10px;
         }
-
+        
         .login-box2 h2 {
             margin: 0 0 30px;
             padding: 0;
             color: #fff;
             text-align: center;
         }
-
+        
         .login-box2 .user-box {
             position: relative;
         }
-
+        
         .login-box2 .user-box input {
             width: 100%;
             padding: 10px 0;
@@ -148,7 +145,7 @@
             outline: none;
             background: transparent;
         }
-
+        
         .login-box2 .user-box label {
             position: absolute;
             top: 0;
@@ -159,7 +156,7 @@
             pointer-events: none;
             transition: .5s;
         }
-
+        
         .login-box2 .user-box input:focus~label,
         .login-box2 .user-box input:valid~label {
             top: -20px;
@@ -167,7 +164,7 @@
             color: #03e9f4;
             font-size: 12px;
         }
-
+        
         .login-box2 form a {
             position: relative;
             display: inline-block;
@@ -181,22 +178,19 @@
             margin-top: 40px;
             letter-spacing: 4px
         }
-
+        
         .login-box2 a:hover {
             background: #03e9f4;
             color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
         }
-
+        
         .login-box2 a span {
             position: absolute;
             display: block;
         }
-
+        
         .login-box2 a span:nth-child(1) {
             top: 0;
             left: -100%;
@@ -205,18 +199,17 @@
             background: linear-gradient(90deg, transparent, #03e9f4);
             animation: btn-anim1 1s linear infinite;
         }
-
+        
         @keyframes btn-anim1 {
             0% {
                 left: -100%;
             }
-
             50%,
             100% {
                 left: 100%;
             }
         }
-
+        
         .login-box a span:nth-child(2) {
             top: -100%;
             right: 0;
@@ -226,18 +219,17 @@
             animation: btn-anim2 1s linear infinite;
             animation-delay: .25s
         }
-
+        
         @keyframes btn-anim2 {
             0% {
                 top: -100%;
             }
-
             50%,
             100% {
                 top: 100%;
             }
         }
-
+        
         .login-box a span:nth-child(3) {
             bottom: 0;
             right: -100%;
@@ -247,18 +239,17 @@
             animation: btn-anim3 1s linear infinite;
             animation-delay: .5s
         }
-
+        
         @keyframes btn-anim3 {
             0% {
                 right: -100%;
             }
-
             50%,
             100% {
                 right: 100%;
             }
         }
-
+        
         .login-box a span:nth-child(4) {
             bottom: -100%;
             left: 0;
@@ -268,18 +259,17 @@
             animation: btn-anim4 1s linear infinite;
             animation-delay: .75s
         }
-
+        
         @keyframes btn-anim4 {
             0% {
                 bottom: -100%;
             }
-
             50%,
             100% {
                 bottom: 100%;
             }
         }
-
+        
         .label {
             position: relative;
             display: inline-block;
@@ -295,7 +285,7 @@
             background: transparent;
             border: none;
         }
-
+        
         p {
             position: relative;
             display: inline-block;
@@ -311,7 +301,7 @@
             background: transparent;
             border: none;
         }
-
+        
         .colorOptions {
             position: relative;
             display: inline-block;
@@ -327,28 +317,42 @@
             background: transparent;
             border: none;
         }
-
+        
         .colorOptions:hover {
             background: #03e9f4;
             color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
         }
-
+        
         br {
             display: block;
             margin-bottom: 0.01em;
         }
-
+        
         .cake-prev {
             border-radius: 10px;
             height: 100px;
             width: 100px;
         }
-
+        
+        .span {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #03e9f4;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 4px;
+            background: transparent;
+            border: none;
+            font-size: 13px;
+        }
+        
         select {
             position: relative;
             display: inline-block;
@@ -365,7 +369,7 @@
             border: none;
             font-size: 13px;
         }
-
+        
         .dir-link {
             position: relative;
             display: inline-block;
@@ -519,12 +523,11 @@
                     <input id="color1" class="colorOptions" type="color">
                     <input id="color2" class="colorOptions" type="color"> <br>
                     <span class="colorOptions" onclick="resetDefault()">Use Default Colors</span><br>
-                    <a onclick="submit()" href="#">
+                    <a onclick="submit()" href="birthday.html">
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span></span>
-                        Submit
+                        <span></span> Submit
                     </a>
 
                 </center>
@@ -534,51 +537,66 @@
             <h2>Information Pg 2</h2>
             <form>
                 <center>
-                    <p>Cake Type:</p>
+                    <div class="user-box">
+                        <input type="text" id="font-in" name="" required="">
+                        <label>Custom Font</label>
+                    </div>
                     <select onclick="setCake()" name="cakes" id="cakes">
+                        <option value="null" selected="selected" disabled>Cake Type</option>
                         <option value="1">Chocolate Cake</option>
                         <option value="2">Platter Cake</option>
                         <option value="3">Strawberry Cake</option>
                         <option value="4">Vanilla Cake</option>
-                    </select><br><br>
+                        <option value="5">Chocolate Fondue Cake</option>
+                    </select><br><br><br><br>
                     <img class="cake-prev" id="cake-prev" src="Chocolate.png">
                     <br><br>
+
                     <a class="dir-link" href="birthday.html">Direct Link to Birthday Site</a><br>
                 </center>
             </form>
         </div>
         <script>
+            if (!localStorage.getItem('color1') || !localStorage.getItem('color2') || !localStorage.getItem('cake') || !localStorage.getItem('BdayPerson')) {
+                console.log('No redirect. From location.replace!')
+            } else {
+                location.replace('birthday.html');
+
+            }
+
             function setCake() {
                 var e = document.getElementById("cakes");
                 var value = e.options[e.selectedIndex].value;
                 localStorage.setItem("cake", value);
                 if (value === "1") {
                     document.getElementById("cake-prev").src = "Chocolate.png";
-                }
-                else if (value === "2") {
+                } else if (value === "2") {
                     document.getElementById("cake-prev").src = "Platter.png";
-                }
-                else if (value === "3") {
+                } else if (value === "3") {
                     document.getElementById("cake-prev").src = "Strawberry.png";
-                }
-                else if (value === "4") {
+                } else if (value === "4") {
                     document.getElementById("cake-prev").src = "Vanilla.png";
-                }
-                else {
-                    console.log('Error...?')
+                } else if (value === "5") {
+                    document.getElementById("cake-prev").src = "Fondue.png";
+                } else {
+                    console.log('Error...? From setCake()');
                 }
             }
+
             function submit() {
                 var color1 = document.getElementById('color1').value;
                 var color2 = document.getElementById('color2').value;
                 var color1S = localStorage.getItem('color1');
                 var color2S = localStorage.getItem('color2');
+                var font = document.getElementById('font-in').value;
                 colorStatus = localStorage.getItem('colorStatus');
                 localStorage.removeItem('BdayPerson');
                 localStorage.removeItem('color1');
                 localStorage.removeItem('color2');
                 localStorage.setItem('color1', color1);
                 localStorage.setItem('color2', color2);
+                localStorage.removeItem('font');
+                localStorage.setItem('font', font);
                 var name = document.getElementById('user').value;
                 if (!name) {
                     return alert('You must enter a name!');
@@ -597,6 +615,7 @@
                         return location.reload()
                     } else if (savedColor === false) {
                         return alert('You decided to set custom colors. Submit again if this was a mistake!');
+                        location.replace('birthday.html');
                     }
                 } else if (color1 && color2) {
                     localStorage.setItem('color1', color1);
@@ -606,12 +625,12 @@
                     return alert('Unknown error. If this keeps happening please report on my discord!')
                 }
 
-                if (!localStorage.getItem('BdayPerson')) {
-                } else {
+                if (!localStorage.getItem('BdayPerson')) {} else {
                     location.replace('birthday.html');
                 }
 
             };
+
             function resetDefault() {
                 var color1_default = "#FF0000";
                 var color2_default = "#0000FF";
