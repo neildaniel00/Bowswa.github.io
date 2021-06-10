@@ -300,7 +300,7 @@ function updateNormal() {
   updateBuildings();
 };
 function updatePretzels() {
-  document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBank.toFixed(1);
+  document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBank;
 };
 function updateBuildings() {
   updateClickers();
