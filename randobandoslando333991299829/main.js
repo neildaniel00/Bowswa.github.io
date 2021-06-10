@@ -432,7 +432,7 @@ function pretzelsPSCalc() {
   }
 
   if (grandmaBakerAmount = 0) return;
-  else if (GrandmaBakerAmount >= 1) {
+  else if (grandmaBakerAmount >= 1) {
     grandmaBakerAddMath = grandmaBakerAmount;
   }else {
     console.log('ERROR 003: CALCULATION ERROR - Grandma Bakers did not calculate properly!');
