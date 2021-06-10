@@ -4,370 +4,392 @@
 <html>
 
 <head>
-  <title>Happy Birthday @name! From Bowswa!</title>
-  <link rel="shortcut icon" href="media/Birthday_Caik.png">
-  <link rel="icon" type="image/png" href="media/Birthday_Caik.png" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-  <style id="animation-container">
-    @keyframes bounce {
-      0% {
-        color: #fff;
-      }
-      100% {
-        top: -20px;
-        color: #000;
-        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
-      }
-    }
-  </style>
-  <style id="cake-style">
-    body {
-      background: rgb(105, 105, 105);
-      background: radial-gradient(circle, rgba(105, 105, 105, 1) 0%, rgba(51, 51, 51, 1) 100%);
-    }
-    
-    .cake {
-      position: absolute;
-      width: 250px;
-      height: 200px;
-      top: 50%;
-      left: 50%;
-      margin-top: -70px;
-      margin-left: -125px;
-    }
-    
-    .plate {
-      width: 270px;
-      height: 110px;
-      position: absolute;
-      bottom: -10px;
-      left: -10px;
-      background-color: #ccc;
-      border-radius: 50%;
-      box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
-    }
-    
-    .cake>* {
-      position: absolute;
-    }
-    
-    .layer {
-      position: absolute;
-      display: block;
-      width: 250px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #553c13;
-      box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
-    }
-    
-    .layer-top {
-      top: 0px;
-    }
-    
-    .layer-middle {
-      top: 33px;
-    }
-    
-    .layer-bottom {
-      top: 66px;
-    }
-    
-    .icing {
-      top: 2px;
-      left: 5px;
-      background-color: #f0e4d0;
-      width: 240px;
-      height: 90px;
-      border-radius: 50%;
-    }
-    
-    .icing:before {
-      content: '';
-      position: absolute;
-      top: 4px;
-      right: 5px;
-      bottom: 6px;
-      left: 5px;
-      background-color: #f4ebdc;
-      box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    
-    .drip {
-      display: block;
-      width: 50px;
-      height: 60px;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      background-color: #f0e4d0;
-    }
-    
-    .drip1 {
-      top: 53px;
-      left: 5px;
-      transform: skewY(15deg);
-      height: 48px;
-      width: 40px;
-    }
-    
-    .drip2 {
-      top: 69px;
-      left: 181px;
-      transform: skewY(-15deg);
-    }
-    
-    .drip3 {
-      top: 54px;
-      left: 90px;
-      width: 80px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-    }
-    
-    .candle {
-      background-color: #7b020b;
-      width: 16px;
-      height: 50px;
-      border-radius: 8px/4px;
-      top: -20px;
-      left: 50%;
-      margin-left: -8px;
-      z-index: 10;
-    }
-    
-    .candle:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #ad030f;
-    }
-    
-    .flame {
-      position: absolute;
-      background-color: orange;
-      width: 15px;
-      height: 35px;
-      border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
-      top: -34px;
-      left: 50%;
-      margin-left: -7.5px;
-      z-index: 10;
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
-      transform-origin: 50% 90%;
-      animation: flicker 1s ease-in-out alternate infinite;
-    }
-    
-    @keyframes flicker {
-      0% {
-        transform: skewX(5deg);
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
-      }
-      25% {
-        transform: skewX(-5deg);
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
-      }
-      50% {
-        transform: skewX(10deg);
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
-      }
-      75% {
-        transform: skewX(-10deg);
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
-      }
-      100% {
-        transform: skewX(5deg);
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
-      }
-    }
-  </style>
-  <style id="other-styles">
-    body {
-      font-family: 'Oxygen';
-    }
-    h1 {
-      height: 100px;
-    }
-    .buttons {
-      position: absolute;
-      top: 100%;
-    }
-  </style>
-  <style id="bouncing-letters">
-    h1 span {
-      position: relative;
-      top: 20px;
-      display: inline-block;
-      animation: bounce 0.3s ease infinite alternate;
-      color: #fff;
-      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
-    }
-    
-    h1 span:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-    h1 span:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-    h1 span:nth-child(4) {
-      animation-delay: 0.3s;
-    }
-    h1 span:nth-child(5) {
-      animation-delay: 0.4s;
-    }
-    h1 span:nth-child(7) {
-      animation-delay: 0.6s;
-    }
-    h1 span:nth-child(8) {
-      animation-delay: 0.7s;
-    }
-    h1 span:nth-child(9) {
-      animation-delay: 0.8s;
-    }
-    h1 span:nth-child(10) {
-      animation-delay: 0.9s;
-    }
-    h1 span:nth-child(11) {
-      animation-delay: 0.1s;
-    }
-    h1 span:nth-child(12) {
-      animation-delay: 0.2s;
-    }
-    h1 span:nth-child(13) {
-      animation-delay: 0.3s;
-    }
-    h1 span:nth-child(14) {
-      animation-delay: 0.4s;
-    }
-    h1 span:nth-child(16) {
-      animation-delay: 0.6s;
-    }
-    h1 span:nth-child(17) {
-      animation-delay: 0.7s;
-    }
-  </style>
-  <style>
-    button {
-      border: none;
-      background-color: inherit;
-    }
-    button {
-      padding: 0.75em 2em;
-      text-align: center;
-      text-decoration: none;
-      color: #2194e0;
-      border: 2px solid #2194e0;
-      font-size: 24px;
-      display: inline-block;
-      border-radius: 0.3em;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-      overflow: hidden;
-    }
-    button:before {
-      content: '';
-      background-color: rgba(255, 255, 255, 0.5);
-      height: 100%;
-      width: 3em;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -4.5em;
-      transform: skewX(-45deg) translateX(0);
-      transition: none;
-    }
-    button:hover {
-      background-color: #2194e0;
-      color: #fff;
-      border-bottom: 4px solid #1977b5;
-    }
-    button:hover:before {
-      transform: skewX(-45deg) translateX(13.5em);
-      transition: all 0.5s ease-in-out;
-    }
-    button:active {
-      transform: translateY(2px);
-      background-color: #2194e0;
-      color: #fff;
-      border-bottom: 4px solid #1977b5;
-    }
-    
-    @-webkit-keyframes sheen {
-      0% {
-        transform: skewY(-45deg) translateX(0);
-      }
-      100% {
-        transform: skewY(-45deg) translateX(12.5em);
-      }
-    }
-    
-    @keyframes sheen {
-      0% {
-        transform: skewY(-45deg) translateX(0);
-      }
-      100% {
-        transform: skewY(-45deg) translateX(12.5em);
-      }
-    }
-  </style>
+    <title>Happy Birthday @name! From Bowswa!</title>
+    <link rel="shortcut icon" href="media/Birthday_Caik.png">
+    <link rel="icon" type="image/png" href="media/Birthday_Caik.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <style id="animation-container">
+        @keyframes bounce {
+            0% {
+                color: #fff;
+            }
+            100% {
+                top: -20px;
+                color: #000;
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+    <style id="cake-style">
+        body {
+            background: rgb(105, 105, 105);
+            background: radial-gradient(circle, rgba(105, 105, 105, 1) 0%, rgba(51, 51, 51, 1) 100%);
+        }
+        
+        .cake {
+            position: absolute;
+            width: 250px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -70px;
+            margin-left: -125px;
+        }
+        
+        .plate {
+            width: 270px;
+            height: 110px;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cake>* {
+            position: absolute;
+        }
+        
+        .layer {
+            position: absolute;
+            display: block;
+            width: 250px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #553c13;
+            box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+        }
+        
+        .layer-top {
+            top: 0px;
+        }
+        
+        .layer-middle {
+            top: 33px;
+        }
+        
+        .layer-bottom {
+            top: 66px;
+        }
+        
+        .icing {
+            top: 2px;
+            left: 5px;
+            background-color: #f0e4d0;
+            width: 240px;
+            height: 90px;
+            border-radius: 50%;
+        }
+        
+        .icing:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: 5px;
+            bottom: 6px;
+            left: 5px;
+            background-color: #f4ebdc;
+            box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .drip {
+            display: block;
+            width: 50px;
+            height: 60px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            background-color: #f0e4d0;
+        }
+        
+        .drip1 {
+            top: 53px;
+            left: 5px;
+            transform: skewY(15deg);
+            height: 48px;
+            width: 40px;
+        }
+        
+        .drip2 {
+            top: 69px;
+            left: 181px;
+            transform: skewY(-15deg);
+        }
+        
+        .drip3 {
+            top: 54px;
+            left: 90px;
+            width: 80px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        
+        .candle {
+            background-color: #7b020b;
+            width: 16px;
+            height: 50px;
+            border-radius: 8px/4px;
+            top: -20px;
+            left: 50%;
+            margin-left: -8px;
+            z-index: 10;
+        }
+        
+        .candle:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ad030f;
+        }
+        
+        .flame {
+            position: absolute;
+            background-color: orange;
+            width: 15px;
+            height: 35px;
+            border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+            top: -34px;
+            left: 50%;
+            margin-left: -7.5px;
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            transform-origin: 50% 90%;
+            animation: flicker 1s ease-in-out alternate infinite;
+        }
+        
+        @keyframes flicker {
+            0% {
+                transform: skewX(5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+            }
+            25% {
+                transform: skewX(-5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            }
+            50% {
+                transform: skewX(10deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+            }
+            75% {
+                transform: skewX(-10deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+            }
+            100% {
+                transform: skewX(5deg);
+                box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+            }
+        }
+    </style>
+    <style id="other-styles">
+        body {
+            font-family: 'Oxygen';
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            height: 100px;
+        }
+        
+        .buttons {
+            position: absolute;
+            top: 100%;
+        }
+    </style>
+    <style id="bouncing-letters">
+        h1 span {
+            position: relative;
+            top: 20px;
+            display: inline-block;
+            animation: bounce 0.3s ease infinite alternate;
+            color: #fff;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+        }
+        
+        h1 span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        h1 span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        h1 span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        
+        h1 span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        
+        h1 span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        
+        h1 span:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        
+        h1 span:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+        
+        h1 span:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+        
+        h1 span:nth-child(11) {
+            animation-delay: 0.1s;
+        }
+        
+        h1 span:nth-child(12) {
+            animation-delay: 0.2s;
+        }
+        
+        h1 span:nth-child(13) {
+            animation-delay: 0.3s;
+        }
+        
+        h1 span:nth-child(14) {
+            animation-delay: 0.4s;
+        }
+        
+        h1 span:nth-child(16) {
+            animation-delay: 0.6s;
+        }
+        
+        h1 span:nth-child(17) {
+            animation-delay: 0.7s;
+        }
+    </style>
+    <style>
+        button {
+            border: none;
+            background-color: inherit;
+        }
+        
+        button {
+            padding: 0.75em 2em;
+            text-align: center;
+            text-decoration: none;
+            color: #2194e0;
+            border: 2px solid #2194e0;
+            font-size: 24px;
+            display: inline-block;
+            border-radius: 0.3em;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button:before {
+            content: '';
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 100%;
+            width: 3em;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -4.5em;
+            transform: skewX(-45deg) translateX(0);
+            transition: none;
+        }
+        
+        button:hover {
+            background-color: #2194e0;
+            color: #fff;
+            border-bottom: 4px solid #1977b5;
+        }
+        
+        button:hover:before {
+            transform: skewX(-45deg) translateX(13.5em);
+            transition: all 0.5s ease-in-out;
+        }
+        
+        button:active {
+            transform: translateY(2px);
+            background-color: #2194e0;
+            color: #fff;
+            border-bottom: 4px solid #1977b5;
+        }
+        
+        @-webkit-keyframes sheen {
+            0% {
+                transform: skewY(-45deg) translateX(0);
+            }
+            100% {
+                transform: skewY(-45deg) translateX(12.5em);
+            }
+        }
+        
+        @keyframes sheen {
+            0% {
+                transform: skewY(-45deg) translateX(0);
+            }
+            100% {
+                transform: skewY(-45deg) translateX(12.5em);
+            }
+        }
+    </style>
 </head>
 
 <body id="body">
-  <audio autoplay loop id="bday">
-    <source src="media/Happy_Birthday.mp3" type="audio/mp3; codecs=opus">
-    <source src="media/Happy_Birthday.mp3" type="audio/mp3">
+
+    <audio autoplay loop id="bday">
+    <source id="audioSource" src="" type="audio/mp3">
     <span>Your browser does not support the <code>audio</code> element.</span>
   </audio>
-  <div id="cake-html">
-    <div class="cake">
-      <div class="plate"></div>
-      <div class="layer layer-bottom"></div>
-      <div class="layer layer-middle"></div>
-      <div class="layer layer-top"></div>
-      <div class="icing"></div>
-      <div class="drip drip1"></div>
-      <div class="drip drip2"></div>
-      <div class="drip drip3"></div>
-      <div class="candle">
-        <div class="flame"></div>
-      </div>
+    <div id="cake-html">
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  <center>
-    <h1 class="bouncy-letters" style="font-size: 4vw">
-      <span>H</span>
-      <span>A</span>
-      <span>P</span>
-      <span>P</span>
-      <span>Y</span>
-      <span>&nbsp;</span>
-      <span>B</span>
-      <span>I</span>
-      <span>R</span>
-      <span>T</span>
-      <span>H</span>
-      <span>D</span>
-      <span>A</span>
-      <span>Y</span>
-      <span>&nbsp;</span>
-      <span id="BDayName">@NAME</span>
-      <span>!</span>
-    </h1>
-  </center>
-  <center>
-    <button type="button" class="buttons" onclick="stop()">
-      Stop Music</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="buttons" onclick="resetName()">
-      Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="buttons" id="bounce_changer" onclick="removeBounce()">
+    <center>
+        <h1 class="bouncy-letters" style="font-size: 4vw">
+            <span>H</span>
+            <span>A</span>
+            <span>P</span>
+            <span>P</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span>B</span>
+            <span>I</span>
+            <span>R</span>
+            <span>T</span>
+            <span>H</span>
+            <span>D</span>
+            <span>A</span>
+            <span>Y</span>
+            <span>&nbsp;</span>
+            <span id="BDayName">@NAME</span>
+            <span>!</span>
+        </h1>
+    </center>
+    <center>
+        <button type="button" class="buttons" onclick="stop()">
+        Stop Music</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="buttons" onclick="resetName()">
+      Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="buttons" id="bounce_changer" onclick="removeBounce()">
       Remove Bounce</button>
-  </center>
+
+    </center>
     <script>
         function webLoad() {
             /*Declare Variables*/
@@ -379,6 +401,13 @@
             var color2_default = "#0000FF";
             var cake_default = "1";
             var font_default = "Oxygen";
+            /*Setting random Music*/
+            var songs = [
+                'media/Happy_Birthday.mp3'
+            ];
+            var randomSong = Math.floor(Math.random() * songs.length);
+
+            document.getElementById('bday').setAttribute('src', songs[randomSong]);
             var cake = localStorage.getItem('cake');
             /*Local Storage*/
             bDayName = localStorage.getItem('BdayPerson');
@@ -435,8 +464,9 @@
       height: 100vh;
     }
     .container {
-      position: relative;
+      position: absolute;
       left: 48%;
+      top: 35%;
     }
 
     .bdaycake {
@@ -1619,7 +1649,7 @@ h1 span {
     }
 `;
             }
-            if (cake === "5" || document.getElementById('bounce_changer').innerHTML === "Remove Bounce") {
+            if (localStorage.getItem('cake') === "5" && document.getElementById('bounce_changer').innerHTML === "Add Bounce") {
                 document.getElementById('animation-container').innerHTML = `
 @keyframes bounce {
 0% {
@@ -1634,8 +1664,14 @@ color: ${color1};
 }`;
                 document.getElementById('bounce_changer').innerHTML = "Add Bounce";
 
-                document.getElementById('bouncing-letters').innerHTML =
-                    `h1 span {
+                document.getElementById('bouncing-letters').innerHTML = `
+              .bouncy-letters{
+     top: 20px;
+     left: 15%;
+     position: absolute
+   }             
+
+h1 span {
       position: relative;
       top: 20px;
       display: inline-block;
@@ -1702,9 +1738,9 @@ color: ${color1};
     h1 span:nth-child(17) {
       animation-delay: 0.7s;
     }
-`
-            } else {}
-            if (cake === "5" || document.getElementById('bounce_changer').innerHTML === "Add Bounce") {
+`;
+
+            } else if (localStorage.getItem('cake') === "5" && document.getElementById('bounce_changer').innerHTML === "Remove Bounce") {
                 document.getElementById('bouncing-letters').innerHTML = `
               .bouncy-letters{
      top: 20px;
@@ -1781,7 +1817,9 @@ h1 span {
     }
 `;
 
-            } else {}
+            } else {
+                console.log('Something went wrong with bounce... removeBounce(); Line 1800')
+            }
         };
 
         function resetName() {
