@@ -384,19 +384,19 @@ function pretzelClicked() {
 
   var clickSound = '';
   const math = Math.floor((Math.random() * 7) + 1);
-  if (math = 1) {
+  if (math === 1) {
     clickSound = new Audio('sounds/clickb1.mp3')
-  }else if (math = 2) {
+  }else if (math === 2) {
     clickSound = new Audio('sounds/clickb2.mp3')
-  }else if (math = 3) {
+  }else if (math === 3) {
     clickSound = new Audio('sounds/clickb3.mp3')
-  }else if (math = 4) {
+  }else if (math === 4) {
     clickSound = new Audio('sounds/clickb4.mp3')
-  }else if (math = 5) {
+  }else if (math === 5) {
     clickSound = new Audio('sounds/clickb5.mp3')
-  }else if (math = 6) {
+  }else if (math === 6) {
     clickSound = new Audio('sounds/clickb6.mp3')
-  }else if (math = 7) {
+  }else if (math === 7) {
     clickSound = new Audio('sounds/clickb7.mp3')
   }
   clickSound.play();
