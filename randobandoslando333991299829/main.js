@@ -130,19 +130,30 @@ function load() {
       totalPretzelCount = localStorage.getItem('BtotalPretzelCount');
       upgradeTokens = localStorage.getItem('BupgradeTokens');
       totalUpgradeTokens = localStorage.getItem('BtotalUpgradeTokens');
+      pretzelBank = parseInt(pretzelBank);
+      totalPretzelCount = parseInt(totalPretzelCount);
+      upgradeTokens = parseInt(upgradeTokens);
+      totalUpgradeTokens = parseInt(upgradeTokens);
 
       highestPPS = localStorage.getItem('BhighestPPS');
+      highestPPS = parseInt(highestPPS);
 
       clickerAmount = localStorage.getItem('BclickerAmount');
       slapperAmount = localStorage.getItem('BslapperAmount');
+      clickerAmount = parseInt(clickerAmount);
+      slapperAmount = parseInt(slapperAmount);
       clickerBuildAmount = clickerAmount + slapperAmount;
 
       grandmaBakerAmount = localStorage.getItem('BgrandmaBakerAmount');
       grandmaTwisterAmount = localStorage.getItem('BgrandmaTwisterAmount');
+      grandmaBakerAmount = parseInt(grandmaBakerAmount);
+      grandmaTwisterAmount = parseInt(grandmaTwisterAmount);
       grandmaBuildAmount = grandmaBakerAmount + grandmaTwisterAmount;
 
       grandpaBakerAmount = localStorage.getItem('BgrandpaBakerAmount');
       grandpaTwisterAmount = localStorage.getItem('BgrandpaTwisterAmount');
+      grandpaBakerAmount = parseInt(grandpaBakerAmount);
+      grandpaTwisterAmount = parseInt(grandpaTwisterAmount);
       grandpaBuildAmount = grandpaBakerAmount + grandpaTwisterAmount;
 
       return updateAll();
@@ -165,19 +176,30 @@ function load() {
       totalPretzelCount = localStorage.getItem('totalPretzelCount');
       upgradeTokens = localStorage.getItem('upgradeTokens');
       totalUpgradeTokens = localStorage.getItem('totalUpgradeTokens');
+      pretzelBank = parseInt(pretzelBank);
+      totalPretzelCount = parseInt(totalPretzelCount);
+      upgradeTokens = parseInt(upgradeTokens);
+      totalUpgradeTokens = parseInt(upgradeTokens);
 
       highestPPS = localStorage.getItem('highestPPS');
+      highestPPS = parseInt(highestPPS);
 
       clickerAmount = localStorage.getItem('clickerAmount');
       slapperAmount = localStorage.getItem('slapperAmount');
+      clickerAmount = parseInt(clickerAmount);
+      slapperAmount = parseInt(slapperAmount);
       clickerBuildAmount = clickerAmount + slapperAmount;
 
       grandmaBakerAmount = localStorage.getItem('grandmaBakerAmount');
       grandmaTwisterAmount = localStorage.getItem('grandmaTwisterAmount');
+      grandmaBakerAmount = parseInt(grandmaBakerAmount);
+      grandmaTwisterAmount = parseInt(grandmaTwisterAmount);
       grandmaBuildAmount = grandmaBakerAmount + grandmaTwisterAmount;
 
       grandpaBakerAmount = localStorage.getItem('grandpaBakerAmount');
       grandpaTwisterAmount = localStorage.getItem('grandpaTwisterAmount');
+      grandpaBakerAmount = parseInt(grandpaBakerAmount);
+      grandpaTwisterAmount = parseInt(grandpaTwisterAmount);
       grandpaBuildAmount = grandpaBakerAmount + grandpaTwisterAmount;
 
       return updateAll();
@@ -292,7 +314,7 @@ function updateAll() {
   updateVersion();
 };
 function update5sec() {
-  document.title = pretzelBank + ' Pretzels';
+  document.title = pretzelBank.toFixed(1) + ' Pretzels';
   pretzelsPSCalc();
 };
 function updateNormal() {
@@ -300,7 +322,7 @@ function updateNormal() {
   updateBuildings();
 };
 function updatePretzels() {
-  document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBank;
+  document.getElementById('prtzelBank').innerHTML = 'Pretzels: ' + pretzelBank.toFixed(1);
 };
 function updateBuildings() {
   updateClickers();
