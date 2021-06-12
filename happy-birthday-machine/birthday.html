@@ -377,7 +377,11 @@
             <span>A</span>
             <span>Y</span>
             <span>&nbsp;</span>
-            <span id="BDayName">@NAME</span>
+            <span id="BDayName">@NAME1</span>
+            <!--<span id="and1">&</span>
+            <span id="BDayName2">@NAME2</span>
+            <span id="and2">&</span>
+            <span id="BDayName3">@NAME3</span>-->
             <span>!</span>
         </h1>
     </center>
@@ -394,6 +398,8 @@
         function webLoad() {
             /*Declare Variables*/
             var bDayName;
+            var bDayName2;
+            var bDayName3;
             var bDayName_default = "Name Here";
             var color1;
             var color1_default = "#FF0000";
@@ -411,6 +417,8 @@
             var cake = localStorage.getItem('cake');
             /*Local Storage*/
             bDayName = localStorage.getItem('BdayPerson');
+            //bDayName2 = localStorage.getItem('BdayPerson2');
+            //bDayName3 = localStorage.getItem('BdayPerson3');
             color1 = localStorage.getItem('color1');
             color2 = localStorage.getItem('color2');
             /*Custom font*/
@@ -422,6 +430,8 @@
             if (!localStorage.getItem('BdayPerson')) {
                 localStorage.setItem('BdayPerson', bDayName_default);
                 bDayName = bDayName_default;
+            } else if (!localStorage.getItem('BdayPerson2')) {
+            } else if (!localStorage.getItem('BdayPerson3')) {
             } else if (!localStorage.getItem('color1')) {
                 localStorage.setItem('color1', color1_default);
                 color1 = color1_default;
