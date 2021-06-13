@@ -611,21 +611,20 @@
                     }
                 } else if (color1S && color2S) {
                     savedColor = confirm('You are using previously saved colors. Do you still want to? Press "Cancel" to set new colors');
-                    if (savedColor === true) {
-                        return location.reload()
-                    } else if (savedColor === false) {
+                    if (savedColor === true) {} 
+                    else if (savedColor === false) {
                         return alert('You decided to set custom colors. Submit again if this was a mistake!');
-                        location.replace('birthday.html');
                     }
                 } else if (color1 && color2) {
                     localStorage.setItem('color1', color1);
                     localStorage.setItem('color2', color2);
-                    location.reload();
                 } else {
                     return alert('Unknown error. If this keeps happening please report on my discord!')
                 }
 
-                if (!localStorage.getItem('BdayPerson')) {} else {
+                if (!localStorage.getItem('BdayPerson')) {
+                    return;
+                } else {
                     location.replace('birthday.html');
                 }
 
@@ -640,6 +639,5 @@
                 localStorage.setItem('color2', color2_default);
             }
         </script>
-</body>
-
+    </body>
 </html>
