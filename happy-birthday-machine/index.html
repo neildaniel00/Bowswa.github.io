@@ -520,9 +520,9 @@
                         <label>BDay Name</label>
                     </div>
                     <p>Colors:</p><br>
-                    <input id="color1" class="colorOptions" type="color">
-                    <input id="color2" class="colorOptions" type="color"> <br>
-                    <span class="colorOptions" onclick="resetDefault()">Use Default Colors</span><br>
+                    <input id="color1" class="colorOptions" type="color" value="#00FF33">
+                    <input id="color2" class="colorOptions" type="color" value="#0091FF"> <br>
+                    <span class="colorOptions" onclick="setDefaultColor()">Use Default Colors</span><br>
                     <a onclick="submit()" href="birthday.html">
                         <span></span>
                         <span></span>
@@ -557,13 +557,6 @@
             </form>
         </div>
         <script>
-            if (!localStorage.getItem('color1') || !localStorage.getItem('color2') || !localStorage.getItem('cake') || !localStorage.getItem('BdayPerson')) {
-                console.log('No redirect. From location.replace!')
-            } else {
-                location.replace('birthday.html');
-
-            }
-
             function setCake() {
                 var e = document.getElementById("cakes");
                 var value = e.options[e.selectedIndex].value;
@@ -583,13 +576,25 @@
                 }
             }
 
+            /*function submit() {
+                var color1 = document.getElementById('color1').value;
+                var color2 = document.getElementById('color2').value;
+                var font = document.getElementById('font-in').value;
+
+                var name = document.getElementById('user').value;
+                if (!name) {
+                    return alert('You must enter a name!');
+                } else if (name) {
+                    localStorage.setItem('BdayPerson', name);
+                } else {
+                    return alert('Unknown error!');
+                }
+            }*/
+
             function submit() {
                 var color1 = document.getElementById('color1').value;
                 var color2 = document.getElementById('color2').value;
-                var color1S = localStorage.getItem('color1');
-                var color2S = localStorage.getItem('color2');
                 var font = document.getElementById('font-in').value;
-                colorStatus = localStorage.getItem('colorStatus');
                 localStorage.removeItem('BdayPerson');
                 localStorage.removeItem('color1');
                 localStorage.removeItem('color2');
@@ -630,13 +635,9 @@
 
             };
 
-            function resetDefault() {
-                var color1_default = "#FF0000";
-                var color2_default = "#0000FF";
-                localStorage.removeItem('color1');
-                localStorage.removeItem('color2');
-                localStorage.setItem('color1', color1_default);
-                localStorage.setItem('color2', color2_default);
+            function setDefaultColor() {
+                document.getElementById('color1').setAttribute.value('#00FF33');
+                document.getElementById('color2').setAttribute.value('#0091FF');
             }
         </script>
     </body>
