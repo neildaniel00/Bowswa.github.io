@@ -67,7 +67,7 @@
       color: #03e9f4;
       font-size: 12px;
     }
-    .login-box form a {
+    .login-box form button {
       position: relative;
       display: inline-block;
       padding: 10px 20px;
@@ -80,7 +80,7 @@
       margin-top: 40px;
       letter-spacing: 4px
     }
-    .login-box a:hover {
+    .login-box button:hover {
       background: #03e9f4;
       color: #fff;
       border-radius: 5px;
@@ -147,7 +147,7 @@
       color: #03e9f4;
       font-size: 12px;
     }
-    .login-box2 form a {
+    .login-box2 form button {
       position: relative;
       display: inline-block;
       padding: 10px 20px;
@@ -160,7 +160,7 @@
       margin-top: 40px;
       letter-spacing: 4px
     }
-    .login-box2 a:hover {
+    .login-box2 button:hover {
       background: #03e9f4;
       color: #fff;
       border-radius: 5px;
@@ -481,12 +481,12 @@
           <input id="color1" class="colorOptions" type="color" value="#00FF33">
           <input id="color2" class="colorOptions" type="color" value="#0091FF"> <br>
           <span class="colorOptions" onclick="setDefaultColor()">Use Default Colors</span><br>
-          <a onclick="submit()" href="birthday.html">
+          <button onclick="submit()">
             <span></span>
             <span></span>
             <span></span>
             <span></span> Submit
-          </a>
+          </button>
         </center>
       </form>
     </div>
@@ -508,7 +508,7 @@
           </select><br><br><br><br>
           <img class="cake-prev" id="cake-prev" src="Chocolate.png">
           <br><br>
-          <a class="dir-link" href="birthday.html">Direct Link to Birthday Site</a><br>
+          <button class="dir-link" onclick="submit()">Direct Link</a><br>
         </center>
       </form>
     </div>
@@ -531,22 +531,44 @@
           console.log('Error...? From setCake()');
         }
       }
-      /*function submit() {
+      function submit() {
         var color1 = document.getElementById('color1').value;
         var color2 = document.getElementById('color2').value;
         var font = document.getElementById('font-in').value;
 
         var name = document.getElementById('user').value;
+
+        var requiredValues = 0;
         if (!name) {
-          return alert('You must enter a name!');
+          alert('You must enter a name!');
         } else if (name) {
           localStorage.setItem('BdayPerson', name);
+          requiredValues = requiredValues + 1;
         } else {
-          return alert('Unknown error!');
+          alert('Unknown error!');
         }
-      }*/
 
-      function submit() {
+        if (color1 = '#00FF33') {
+          if (color2 = '#0091FF') {
+            colorConfirm = confirm('You are using the default colors. Are you sure you want to do this?')
+            if (colorConfirm === true) {
+              requiredValues = requiredValues + 1;
+            }else if (colorConfirm === false) {
+              return alert('You have decided to use custom colors. Submit again if this was a mistake!');
+            }
+          }else return;
+        }else if (color1 && color2) {
+          requiredValues = requiredValues + 1;
+        }
+
+        if (requiredValues < 2) {
+          return
+        }else if (requiredValues >= 2) {
+          location.replace('birthday.html');
+        }
+      }
+
+      /*function submit() {
         var color1 = document.getElementById('color1').value;
         var color2 = document.getElementById('color2').value;
         var font = document.getElementById('font-in').value;
@@ -587,7 +609,7 @@
         } else {
           location.replace('birthday.html');
         }
-      };
+      };*/
       function setDefaultColor() {
         document.getElementById('color1').setAttribute('value', '#00FF33');
         document.getElementById('color2').setAttribute('value', '#0091FF');

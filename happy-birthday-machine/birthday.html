@@ -355,7 +355,7 @@
       </h1>
     </center>
     <center>
-      <button type="button" class="buttons" onclick="stop()">
+      <button type="button" class="buttons" onclick="manualStop()" id="music_toggle">
         Stop Music</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button type="button" class="buttons" onclick="resetName()">
         Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1804,22 +1804,36 @@ h1 span {
         };
 
         function resetName() {
-            stop();
-            var end = new Audio('media/windowsXPshutdown.mp3');
-            end.play();
-            setTimeout(function() {
-                location.replace('index.html');
-            }, 3000);
-            localStorage.removeItem('color1');
-            localStorage.removeItem('color2');
-            localStorage.removeItem('BdayPerson');
-            localStorage.removeItem('cake');
-            localStorage.removeItem('font');
+          stop();
+          var end = new Audio('media/windowsXPshutdown.mp3');
+          end.play();
+          setTimeout(function() {
+            location.replace('index.html');
+          }, 3000);
+          localStorage.removeItem('color1');
+          localStorage.removeItem('color2');
+          localStorage.removeItem('BdayPerson');
+          localStorage.removeItem('cake');
+          localStorage.removeItem('font');
         };
 
         function stop() {
-            audio = document.getElementById('bday');
-            audio.pause();
+          audio = document.getElementById('bday');
+          audio.pause();
+        };
+        function manualStop() {
+          document.getElementById('music_toggle').innerHTML = "Start Music";
+          document.getElementById.setAttribute('onclick', 'manualStart()');
+          audio = document.getElementById('bday');
+          audio.pause();
+          localStorage.setItem('music_status', false);
+        };
+        function manualStart() {
+          document.getElementById('music_toggle').innerHTML = "Stop Music";
+          document.getElementById.setAttribute('onclick', 'manualStops()');
+          audio = document.getElementById('bday');
+          audio.play();
+          localStorage.setItem('music_status', true);
         };
         window.onload = webLoad();
     </script>
