@@ -349,8 +349,8 @@
         <span id="BDayName">@NAME1</span>
         <span id="and1">&</span>
         <span id="BDayName2">@NAME2</span>
-        <span id="and2">&</span>
-        <span id="BDayName3">@NAME3</span>
+        <!--<span id="and2">&</span>
+        <span id="BDayName3">@NAME3</span>-->
         <span>!</span>
       </h1>
     </center>
@@ -400,9 +400,9 @@
           } else if (!localStorage.getItem('BdayPerson2')) {
             document.getElementById("and1").style.display = "none";
             document.getElementById("BDayName2").style.display = "none";
-          } else if (!localStorage.getItem('BdayPerson3')) {
-            document.getElementById("and2").style.display = "none";
-            document.getElementById("BDayName3").style.display = "none";
+          //} else if (!localStorage.getItem('BdayPerson3')) {
+            //document.getElementById("and2").style.display = "none";
+            //document.getElementById("BDayName3").style.display = "none";
           } else if (!localStorage.getItem('color1')) {
             localStorage.setItem('color1', color1_default);
             color1 = color1_default;
