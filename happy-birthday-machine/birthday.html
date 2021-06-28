@@ -1823,14 +1823,14 @@ h1 span {
         };
         function manualStop() {
           document.getElementById('music_toggle').innerHTML = "Start Music";
-          document.getElementById.setAttribute('onclick', 'manualStart()');
+          document.getElementById('music_toggle').setAttribute('onclick', 'manualStart()');
           audio = document.getElementById('bday');
           audio.pause();
           localStorage.setItem('music_status', false);
         };
         function manualStart() {
           document.getElementById('music_toggle').innerHTML = "Stop Music";
-          document.getElementById.setAttribute('onclick', 'manualStops()');
+          document.getElementById('music_toggle').setAttribute('onclick', 'manualStops()');
           audio = document.getElementById('bday');
           audio.play();
           localStorage.setItem('music_status', true);
