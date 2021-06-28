@@ -1830,7 +1830,7 @@ h1 span {
         };
         function manualStart() {
           document.getElementById('music_toggle').innerHTML = "Stop Music";
-          document.getElementById('music_toggle').setAttribute('onclick', 'manualStops()');
+          document.getElementById('music_toggle').setAttribute('onclick', 'manualStop()');
           audio = document.getElementById('bday');
           audio.play();
           localStorage.setItem('music_status', true);
