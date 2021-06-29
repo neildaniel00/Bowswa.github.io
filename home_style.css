@@ -38,8 +38,6 @@ a {
 }
 
 .parallax {
-  /* The image used */
-  background-image: url('media/Youtube_Banner V2.png');
   /* Full height */
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -59,7 +57,12 @@ html {
 }
 
 #content {
-  height: 100vh;
+  height: auto;
+}
+
+#footer {
+  height: 30vh;
+  bottom: auto;
 }
 
 .centered {
